@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+\title{Solutions to Discrete and Combinatorial Mathematics - 5th Ed.
+\linebreak R.P. Grimaldi
+\linebreak
+\linebreak
+\linebreak
+\Large{Luqman Malik, PhD Candidate --- GLMS, UC Berkeley} 
+\linebreak 
+\linebreak}
+\date{}
+\maketitle
+
+\pagebreak
+\begin{center}\Large{Part 1: Fundamentals of Discrete Mathematics}
+\linebreak
+\linebreak \large{Fundamental Principals of Counting}
+\linebreak
+\linebreak \end{center} 
+{\begin{flushleft}{\bf{The Rules of Sum and Product}}
+\linebreak
+\linebreak
+1. A college Library has 40 textbooks on economics and 50 textbooks on political science. By the {\it{rule of sum}} a student can select from 40 + 50 = 90 textbooks to learn about either subject.
+\linebreak 
+\linebreak 
+2. A computer science instructor has seven different introductory books each on C++, Java, and Python. He may recommend any one of these 21 books to a student interested in learning a first programming language. 
+\linebreak
+\linebreak
+3. Our instructor of  (2) has two colleagues. One of them has three textbooks on the analysis of algorithms, and the other has five such textbooks. If {\it{n}} denotes the maximum number of different books on this topic that our instructor can borrow from his colleagues, then \[5 \leq n \leq 8 \] as both colleagues may own copies of the same textbooks.
+\linebreak
+\linebreak
+4. In an effort to reach a decision on the expansion of a small company, an administrator assigns 12 staff members to two committees. Five of them are assigned to committee A, which will explore possible favorable results from such an expansion, and the remaining seven form committee B, which is tasked with scrutinizing possible unfavorable repercussions. Should the administrator decide to speak with just one committee member, prior to making the decision, then by the {\it{rule of sum}} there are 12 possible candidates to consult for input. Suppose the administrator decides to speak with a member of committee A on Monday, and a member of committee B on Tuesday, prior to making a decision. Then by the rule of product there are \[ 5 \times 7 = 35 \] ways in which two such employees can be selected.
+\linebreak
+\linebreak
+5. Consider the manufacture of license plates consisting of two letters followed by four digits. If no letters or digits may be repeated, there are \[ 26 \times 25 \times 10 \times 9 \times 8 \times 7 = 3, 276, 000 \] such possible license plates.
+With repetitions allowed, \[ 26 \times 26 \times 10 \times 10 \times 10 \times 10 = 6, 760, 000 \] different license plates are possible.
+\linebreak
+\linebreak
+Again, allowing repetitions, the number of license plates that have only vowels (A, E, I, O, U) and even digits (including 0) is \[ 5 \times 5 \times 5 \times 5 \times 5 \times 5 = 5^6. \]
+6. Two individuals volunteer for a memory recall test. For a brief moment person X and person Y are shown a license plate, which consists of two letters followed by four digits. Upon questioning, PX recalls that the second letter on the plate was either an O or a Q, and the last digit was either a 3 or an 8. PY recalls that the first letter was either a C or a G, and that the first digit was definitely a 7. How many different license plates match this description? 
+
+From the rule of product, we find that the there are \[ 2 \times 2 \times 1 \times 10 \times 10 \times 2 = 800 \] such possible license plates.
+\linebreak
+\linebreak
+7. To store data, a computer's main memory contains a large collection of circuits, each of which capable of storing a bit - i.e., one of the binary digits 0 or 1. These circuits are arranged in units called (memory) cells. To identify such a cell in a computer's main memory, each is assigned a unique name called its address. Depending on the type of the computer, an address will be represented by an ordered list of [math]n[/math] bits. For an eight-bit address (collectively referred to as a byte), there are 
+
+\[ 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 = 2^8 = 256 \]
+
+possible options - that is, we have 256 addresses that may be used to identify cells where certain information may be stored. Some memory cells use two-byte or 16-bit addresses for identification. There are \[ 256 \times 256 = 2^8 \times 2^8 = 2^{16} = 65,536 \] such available addresses. This system of addressing memory cells is commonly extended to four-byte / 32-bit and eight-byte / 64-bit architectures, which allow the issuance of 
+
+\[ 2^8 \times 2^8 \times 2^8 \times 2^8 = 2^{32} =4, 294, 967, 296 \] and
+
+\[ 2^{64} = 18, 446, 744, 073, 709, 551, 616 \]  possible addresses, respectfully.
+\linebreak
+\linebreak
+8. Lets consider the combination of the rules of product and sum by looking at a possible coffee shop menu. Suppose there are listed six kinds of muffins, eight sandwiches, and five beverages (hot coffee, hot tea, iced tea, cola, and orange juice). In how many ways can one order either a muffin and hot beverage or a sandwich and a cold beverage?
+\linebreak
+\linebreak
+By the rule of product, there are $6 \times 2 = 12$ ways in which one can order a muffin and hot beverage, and there are $8 \times 3 = 24$ ways in which one can purchase a sandwich and cold beverage. So by the rule of sum, there are $12 + 24 = 36$ ways in which one can order either combination.
+\linebreak
+\linebreak
+9. Three small towns, designated by A, B, and C, are interconnected by a system of two-way roads, as shown in Figure 1.
+\linebreak
+\begin{center}
+\includegraphics[scale=0.60] {EX9.png} \\ Fig. 1 \linebreak
+\end{center}
+(a) In how many ways can one travel from town A to town C?
+\linebreak
+\linebreak
+There are four roads from town A to town B, and three roads from tow B to town C. So, by the rule of product there are $4 \times 3 = 12$ roads from A to C that pass through B. Since there two direct roads from A to C , there are $12 + 2 = 14$ ways in which the trip from A to C can be made.  
+\linebreak
+\linebreak
+(b) How many different round trips can one travel from town A to town C and back to A? 
+\linebreak
+\linebreak
+By the rule of product, we find that there are $14 \times 14 = 196$ such distinct round trips. 
+\linebreak
+\linebreak
+(c) How many of the round trips in (b) are such that the return trip (from C to A) is at least partially different from the A to C trip? (For example, if the A to C trip is along roads $\textrm{R}_1 \textrm{and R}_6,$ then the return trip might include $\textrm{R}_6 \ \textrm{and R}_3, \textrm{or roads} \ \textrm{R}_7 \ \textrm{and R}_2, \textrm{or road} \ \textrm{R}_9$ among other options, but not roads $\textrm{R}_6 \textrm{and R}_1.$ Here, there are $14 \times 13 = 182$ such possible round trips. 
+\end{flushleft}}
+\end{document} 
