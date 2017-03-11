@@ -106,13 +106,17 @@
 			outline: 0;
 			}
 
-		a{color: white; text-decoration: none; font-size: 13px}
+		a{color: white; text-decoration: none; font-size: 13}
 		a:hover{color: lightgrey}
-		a.pset{color: white; text-decoration: none; font-size: 13px; font-weight: 500}
+		
+		a.pset{color: white; text-decoration: none; font-size: 13; font-weight: 500}
 		a.pset:hover{text-decoration: underline}
-		a.pset1{color: white; text-decoration: none; font-size: 13px}
+		a.pset1{color: white; text-decoration: none; font-size: 13}
 		a.pset1:hover{text-decoration: underline;cursor: default;}
-		a.textnav{color: #85929E; text-decoration: none; font-size: 15px}
+		a.pset_title{color: white; text-decoration: none; font-size: 18; font-weight: 500}
+		a.pset_title:hover{color:lightgrey; transition: color .1s;}
+		
+		a.textnav{color: white; text-decoration: none; font-size: 15}
 		a.textnav:hover{text-decoration: underline; cursor:default;}
 		/*a:active{color: grey !important}*/
 		a.two{color:lightgrey; text-decoration: none}
@@ -190,15 +194,19 @@
 
 		.dropdown-content {
 			width: 100%;
+			color:white;
 		    display: none;
 		    position: absolute;
 		    left: -62;
 		    top: 26;
-		    background: linear-gradient(#f2f2f2, lightgrey);
+		    background: linear-gradient(#aaa, #D1D3D4);
 		    min-width: 1176;
 		    height: 695;
 		    padding: 7 51;
-		    opacity: 1;
+		    margin:0 0 0 -2;  
+			font-family:'Avenir', 'light'; 
+			font-size:18; 
+			cursor:default
 		}
 
 		.dropdown:hover .dropdown-content {
@@ -244,6 +252,12 @@
 		}
 
 		.vertical_line{height:210px; width:1px;background:#aaa; margin: 10 0 0 9}
+
+		hr.style-two {
+    		border: 0;
+    		height: 1px;
+    		background-image: linear-gradient(to right, #aaa, #E5E7E9, #aaa);
+		}
 
 		</style>
 	</head>
@@ -1017,7 +1031,7 @@
 							    	<td style="vertical-align:top; padding: 0 0 0 0">11.</td>
 							    	<td style="vertical-align:top; padding: 0 0 0 10">
 							        	Three small towns designated by A, B, and C are interconnected by a system of two-way roads, as shown in Fig. 1.4.
-							        	<div style="padding:10 0 5 0" align="center">
+							        	<div style="padding:10 0 5 0; margin:0 0 0 50">
 							        		<canvas id="C1_P11" data-processing-sources="C1_P11/C1_P11.pde" width="280" height="240"></canvas>
 							        	</div>
 							        	<table>
@@ -3187,31 +3201,19 @@
 										<i class="material-icons">view_comfy</i>
 									</a>
 								</div>
-								<div  id="myDropdown" 
-										class="dropdown-content">
-								  <div style="margin:0 0 0 -2; 
-								  				color:#959EA7; 
-								  				font-family:'Avenir', 'light'; 
-								  				font-size:18; 
-								  				cursor:default">
-								  	<p style="color:grey; 
-								  				font-family:'Avenir', 'light'; 
-								  				font-size:18;">
-									Discrete and Combinatorial Mathematics
-									<br>
-									<span style="font-size:16px">An Applied Introduction. 5E&ndash;PS</span>
-									<br>
-									&#9634; <span style="font-size:12px">RALPH P. GRIMALDI</span>
-									<br>
-									<span style="font-size:14px">Solutions by Luqman Malik</span>
-									</p>
-								  	<div style="float:right; margin-top:-30">
-								  		<a class="textnav">&#9508;</a>
-								  		<a class="textnav">&#9500;</a></div>
-								  </div>
-								  <br>
-								  <br>
-								  <div style="overflow:auto; height:550; border-top:1 solid lightgrey; margin-top:-30">
+								<div  id="myDropdown" class="dropdown-content">
+								  	<div style="padding:18 0 0 0">
+										<a class="pset_title" onclick="currentDiv(1)">
+											Discrete and Combinatorial Mathematics / 5E&ndash;PS
+										</a>
+									  	<div style="float:right; margin-top:0">
+									  		<a class="textnav">&#9508;</a>
+									  		<a class="textnav">&#9500;</a>
+									  	</div>
+								  	</div>
+								  	<br>
+								  	<hr class="style-two">
+								  	<div style="overflow:auto; height:550; margin:-8 0 0 0">
 						          <table style="width:100%">
 						          	<tr>
 						          		<td>&#160;</td>
@@ -3220,7 +3222,7 @@
 						          		<td>&#160;</td>
 						          	</tr>
 						          	<tr>
-						          		<td><a class="pset" style="cursor:default" onclick="currentDiv(1)">Fundamental Principles of Counting</a></td>
+						          		<td><a class="pset" style="cursor:default" onclick="currentDiv(2)">Fundamental Principles of Counting</a></td>
 						          		<td><a class="pset" style="cursor:default">Numbers of Various Sorts</a></th>
 						          		<td><a class="pset" style="cursor:default">Functions</a></th>
 						          		<td><a class="pset" style="cursor:default">Graphs</a></th>
@@ -3230,8 +3232,8 @@
 						          			<a class="pset1" onclick="currentDiv(2)">1</a>
 						          			<a class="pset1" onclick="currentDiv(2)">2</a>
 						          			<a class="pset1" onclick="currentDiv(2)">3</a>
-						          			<a class="pset1" onclick="currentDiv(3)">4</a>
-						          			<a class="pset1" onclick="currentDiv(3)">5</a>
+						          			<a class="pset1" onclick="currentDiv(2)">4</a>
+						          			<a class="pset1" onclick="currentDiv(2)">5</a>
 						          			<a class="pset1" onclick="currentDiv(4)">6</a>
 						          			<a class="pset1" onclick="currentDiv(4)">7</a>
 						          			<a class="pset1" onclick="currentDiv(5)">8</a>
