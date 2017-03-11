@@ -259,6 +259,28 @@
     		background-image: linear-gradient(to right, #aaa, #E5E7E9, #aaa);
 		}
 
+		#wall{
+		    width:100%;
+		    height:50px;
+		    margin:15 0 0 0;
+		    padding: 0 0 0 0;
+		    float:left;
+		}
+		.shelf{
+		    float:left;
+		    font-size:20;
+		    color:#aaa; width:25%;
+		    border-bottom:1 solid #aaa;
+		    margin:0 20 0 0;
+		}
+		.shelf0{
+		    float:left;
+		    font-size:20;
+		    color:#aaa; width:28%;
+		    border-bottom:1 solid #aaa;
+		    margin:0 20 0 0;
+		}
+
 		</style>
 	</head>
 
@@ -1080,72 +1102,33 @@
 					</td>
 					<td style="vertical-align:top;
 								width:50%;
-								padding: 2 0 0 30;
+								padding: 3 0 0 28;
 								border-top:20 solid #f2f2f2;
 								border-left:1 solid #f2f2f2">
 						<div class="infscrll">
-							<table>
+							<table style="padding: 0 0 0 0">
 								<tr>
-									<td style="vertical-align:top; padding: 0 10 0 0">6.</td>
-									<td style="vertical-align:top; padding: 0 10 0 0">(a)</td>
-									<td style="vertical-align:top; padding: 1 0 0 0">
-										<p style="vertical-align:top; padding: 0 20 0 0">
-											From $0 \leq x < y$ and probleem 5(viii) we have $x^2 < y^2$ [as in Problem 5(ix)]. Then, from $0 \leq x < y$ and $x^2 < y^2$ we have $x^3 < y^3.$ We continue this way to prove that $x^n < y^n$ for  $n=2,3, ...$ (a rigorous proof uses induction, covered in the next chapter). $ \ \ \square \ \color{lightgrey}{&#9733;}$
-										</p>
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding: 0 10 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding: 0 10 0 0">(b)</td>
-									<td>
-										<p style="vertical-align:top; padding: 0 20 0 0">
-											By part (a), we know that if $0 \leq x < y,$ then $x^n < y^n$. Moreover, if $0 \leq x < y,$ then $0 \leq -y < -x,$ so by (a), $(-y)^n < -(x)^n.$ Since $n$ is odd, we derive $-y^n < -x^n,$ hence $x^n < y^n.$ Finally, $x < 0 \leq y$ implies that $x^n < 0 \leq y^n,$ since $n$ is odd. Thus, in every case, if $x < y$ then $x^n < y^n. \ \ \square$
-										</p>
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding: 0 10 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding: 0 10 0 0">(c)</td>
-									<td>
-										<p style="vertical-align:top; padding: 0 20 0 0">
-											This follows immediately from (b) since $x < y$ implies that $x^2 < y^2$, and conversely, $y < x$ implies that $y^2 < x^2. \ \ \square$
-										</p>
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding: 0 10 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding: 0 10 0 0">(d)</td>
-									<td>
-										<p style="vertical-align:top; padding: 0 20 0 0">
-											Similarly, if $n$ is even, then using part (a) instead of part (b) we see thtat if $x,y \geq 0 \ \text{and} \ x^n=y^n,$ then $x=y$. Moreover, if $x,y \leq 0$ and $x^n=y^n,$ then $-x,-y \leq 0$ and $(-x)^n=(-y)^n,$ so again $x=y.$ The only other possibility is that one of $x$ and $y$ is positive, the other negative. In this case $x$ and $-y$ are both positive or both negative. Moreover $x^n=(-y)^n,$ since $n$ is even, so it follows from the previous cases that $x=-y. \ \ \square \ \color{lightgrey}{&#9733;}$
-										</p>
-									</td>
-								</tr>
-							</table>
-							<table style="padding: 15 0 0 0">
-								<tr>
-									<td style="vertical-align:top; padding: 0 10 0 0">7.</td>
-									<td style="vertical-align:top; padding: 0 10 0 0">
-										If $a < b$, then 
+									<td style="vertical-align:top; padding:0 00 0 00">10.</td>
+									<td style="vertical-align:top; padding:0 20 0 10">
+										Any subdivision of the fifteen books resulting in two nonempty shelves gives us $15!$ ways to arrange the books &mdash; for example
+										<div id="wall">
+											<div class="shelf">
+												&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+											</div>
+											<div class="shelf0">
+												&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+											</div>
+										</div>
+										<div id="wall">
+											<div class="shelf0">
+												&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+											</div>
+											<div class="shelf">
+												&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+											</div>
+										</div>
 										<br>
-										<br>
-										$\displaystyle a=\frac{a+a}{2} < \frac{a+b}{2} < \frac{b+b}{2}=b.$
-										<br>
-										<p style="vertical-align:top; padding: 0 20 0 0">
-											$\big(((0 < a < b) \ \rightarrow \ (a^2 < ab)) \ \succ \ 5(\text{iv})\big) \ \rightarrow \ \big((a < \sqrt{ab}) \ \succ \ 5(\text{x})\big).$ Moreover, we have $(a-b)^2 > 0,$ hence
-										</p>
-										<p style="vertical-align:top; padding: 0 0 0 20">
-											$$a^2+b^2 > 2ab, \ \Leftrightarrow \ a^2+2ab+b^2 > 4ab, \ \Leftrightarrow \ (a+b)^2 > 4ab,$$
-										</p>
-										so $a+b>2 \sqrt{ab} \ \Leftrightarrow \ \sqrt{ab} < (a+b)/2.$ Moreover, for all $a,b$ we have $(a-b)^2 \geq 0,$ and thus $4ab \leq (a+b)^2 \ \Leftrightarrow \ \sqrt{ab} \ \leq \ (a+b)/2 \ \text{for} \ a,b \geq 0. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:15 10 0 0">8.</td>
-									<td style="vertical-align:top; padding:15 10 0 0">
-										<p style="vertical-align:top; padding: 0 20 10 0">
-											Two applications of P'12 show that if $a < b \ \text{and} \ c < d,$ then $a+c < b+c < b+d,$ do $a+c < b+d$ by P'11. In particylar, if $0 < b$ and $0 < d,$ then $0 < b+d,$ which proves P11. It follows, in addition, that if $a < 0,$ then $-a>0;$ for if $-a < 0$ were true, then $0=a+(-a) < 0,$ contradicting P'10. Consequently, any nuber $a$ satisfies precisely one of the conditiond $a=0,a>0,a < 0,$ the last being equivalent to$-a>0.$ This proves P10. Finally, P'13 shows that if $0 < a$ and $0 < c,$ then $0 < ac,$ which proves P12. $ \ \ \square$ <label title="Spivak" style="color: #aaa; padding-left:5px">*</label>
-										</p>
+										both yield $15!$ possible arragements. Since there are 14 such possible subdivisions, the total number of ways in which Pamela can arrange her books under the given condition is $(14)(15!).$
 									</td>
 								</tr>
 							</table>
@@ -3234,14 +3217,14 @@
 						          			<a class="pset1" onclick="currentDiv(2)">3</a>
 						          			<a class="pset1" onclick="currentDiv(2)">4</a>
 						          			<a class="pset1" onclick="currentDiv(2)">5</a>
-						          			<a class="pset1" onclick="currentDiv(4)">6</a>
-						          			<a class="pset1" onclick="currentDiv(4)">7</a>
-						          			<a class="pset1" onclick="currentDiv(5)">8</a>
-						          			<a class="pset1" onclick="currentDiv(5)">9</a>
-						          			<a class="pset1" onclick="currentDiv(5)">10</a>
-						          			<a class="pset1" onclick="currentDiv(5)">11</a>
-						          			<a class="pset1" onclick="currentDiv(6)">12</a>
-						          			<a class="pset1" onclick="currentDiv(6)">13</a>
+						          			<a class="pset1" onclick="currentDiv(3)">6</a>
+						          			<a class="pset1" onclick="currentDiv(3)">7</a>
+						          			<a class="pset1" onclick="currentDiv(3)">8</a>
+						          			<a class="pset1" onclick="currentDiv(3)">9</a>
+						          			<a class="pset1" onclick="currentDiv(4)">10</a>
+						          			<a class="pset1" onclick="currentDiv(4)">11</a>
+						          			<a class="pset1" onclick="currentDiv(4)">12</a>
+						          			<a class="pset1" onclick="currentDiv(4)">13</a>
 						          			<a class="pset1" onclick="currentDiv(7)">14</a>
 						          			<a class="pset1" onclick="currentDiv(7)">15</a>
 						          			<br>
