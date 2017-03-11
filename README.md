@@ -1,4 +1,4 @@
-## Discrete and Combinatorial Mathematics: 5E P_Sets 
+## Discrete and Combinatorial Mathematics
 ### An Applied Introduction
 #### 5E P_Sets
 ##### Ralph P. Grimaldi
