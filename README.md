@@ -1,2 +1,5 @@
-## Discrete and Combinatorial Mathematics: Fifth Edition — R.P. Grimaldi
-These are my solutions to the text.
+## Discrete and Combinatorial Mathematics: 5E P_Sets 
+### An Applied Introduction
+#### 5E P_Sets
+##### Ralph P. Grimaldi
+These are my solutions to the text. I also intend to include some computational research based on the chapters and sections covering finite state machines.
