@@ -59,10 +59,10 @@
 		}						
 
 		.infscrll {
-		    height: 645 !important;
+		    height: 670 !important;
 		    overflow: scroll;
 		    font-size:15; 
-		    padding-top:40
+		    padding-top:20
 		}
 		.infscrll_C2P1 {
 		    height: 660 !important;
@@ -724,13 +724,13 @@
 					</td>
 					<td style="vertical-align:top;
 								width:50%;
-								padding: 1 0 0 30;
+								padding: 0 0 0 30;
 								border-top:20 solid #f2f2f2;
 								border-left:1 solid #f2f2f2">
 						<div class="infscrll">
 							<table style="padding:0 20 0 0">
 								<tr>
-									<td style="vertical-align:top; padding:2 0 0 00">1.</td>
+									<td style="vertical-align:top; padding:0 0 0 00">1.</td>
 									<td style="vertical-align:top; padding:0 0 0 10">
 										<table>
 											<tr>
@@ -927,7 +927,7 @@
 								border-top:20 solid #f2f2f2;
 								border-left:1 solid #f2f2f2">
 						<div class="infscrll">
-							<table style="padding: 3 20 0 0">
+							<table style="padding: 0 20 0 0">
 								<tr>
 									<td style="vertical-align:top; padding: 0 0 0 00">6.</td>
 									<td style="vertical-align:top; padding: 0 0 0 10">
@@ -1103,7 +1103,7 @@
 					</td>
 					<td style="vertical-align:top;
 								width:50%;
-								padding: 3 0 0 28;
+								padding: 0 0 0 28;
 								border-top:20 solid #f2f2f2;
 								border-left:1 solid #f2f2f2">
 						<div class="infscrll">
@@ -1181,10 +1181,10 @@
 									<td style="vertical-align:top; padding:0 0 0 10">
 										<ol type="a" style="padding:0 0 0 20">
 											<li>
-												$8!=P(8,8). \ \square$
+												This is equivalent to asking: "In how many ways can we permute 8 objects selected from a set of 8 objects?," which is equal to  $P(8,8)=8!. \ \square$
 											</li>
 											<li>
-												$7!, \ \text{and} \ 6!. \ \square$
+												In the former case, we simply fix $t$, and permute the remaining list $(7!)$ &mdash; in the latter, we fix $t \ \text{and} \ c,$ and permute the middle list $(6)!. \ \square$
 											</li>
 										</ol>
 									</td>
@@ -1245,7 +1245,7 @@
 						     	<tr>
 									<td style="vertical-align:top; padding: 0 00 0 00">17.</td>
 					        		<td style="vertical-align:top; padding: 0 20 0 10">
-					        			In the Internet, each network interface of a computer is asigned one, or more, Internet addresses. The nature of these Internet addresses is dependent on network size. For the Internet Standard regarding reserved network numbers (STD 2), each address is a 32&ndash;bit string which falls into one of the following three classes: (1) a class A address, used for the largest networks, begins with a 0, which is then followed by a 7&ndash;bit <code>network number</code>, and then a 24&ndash;bit <code>local address</code>. However, one is restricted from using the network numbers of all 0's or all 1's. (2) The class B address is meant for an intermediate&ndash;sized network. This address starts with the 2&ndash;bit string 10, which is followed by a 14&ndash;bit network number and a 16&ndash;bit local address. But the local addresses of all 0's or all 1's are not permitted. (3) Class C addresses are used for the smalles networks. These addresses consist of the 3&ndash;bit string 110, followed by a 21&ndash;bit network number, and then an 8&ndash;bit local address. Once again, the local addressed of all 0's or all 1's are excluded. How many different addresses of each class are available on the Internet, for this Internet Standard?
+					        			In the Internet, each network interface of a computer is asigned one, or more, Internet addresses. The nature of these Internet addresses is dependent on network size. For the Internet Standard regarding reserved network numbers (STD 2), each address is a 32&ndash;bit string which falls into one of the following three classes: (1) a class A address, used for the largest networks, begins with a 0, which is then followed by a 7&ndash;bit <code>network number</code>, and then a 24&ndash;bit <code>local address</code>. However, one is restricted from using the network numbers of all 0's or all 1's and the local addresses of all 0's or all 1's. (2) The class B address is meant for an intermediate&ndash;sized network. This address starts with the 2&ndash;bit string 10, which is followed by a 14&ndash;bit network number and a 16&ndash;bit local address. But the local addresses of all 0's or all 1's are not permitted. (3) Class C addresses are used for the smallest networks. These addresses consist of the 3&ndash;bit string 110, followed by a 21&ndash;bit network number, and then an 8&ndash;bit local address. Once again, the local addresses of all 0's or all 1's are excluded. How many different addresses of each class are available on the Internet, for this Internet Standard?
 							        </td>
 						      	</tr>
 						    </table>
@@ -1259,13 +1259,13 @@
 						    </table>
 						</div>
 					</td>
-					<td style="vertical-align:top; 
-											padding-left: 30; 
-											border-top: 20 solid #f2f2f2; 
-											border-left: 1 solid #f2f2f2; 
-											width: 50%">
-						<div style="height: 635; overflow:auto; padding:41 0 15 0">
-							<table>
+					<td style="vertical-align:top;
+								width:50%;
+								padding: 0 0 0 28;
+								border-top:20 solid #f2f2f2;
+								border-left:1 solid #f2f2f2">
+						<div class="infscrll">
+							<table style="padding:0 20 0 0">
 								<tr>
 									<td style="vertical-align:top; padding:0 0 0 00">14.</td>
 									<td style="vertical-align:top; padding:0 0 0 10">
@@ -1295,6 +1295,28 @@
 											<li>With repetitions allowed, there are $40^{25}$ unique messages. $\square$</li>
 											<li>By the rule of product, there are $40\cdot30\cdots30\cdot40=(40^2)(30^{23})$ messages. $\square$</li>
 										</ol>
+									</td>
+								</tr>
+							</table>
+							<table style="padding:5 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 0 0 00">17.</td>
+									<td style="vertical-align:top; padding:0 0 0 10">
+										<ul style="list-style-type:none; padding:0 0 0 0">
+											<li>
+												(Note: I've replaced the word "class" with the more contemporary notion of "type", i.e., I'll be considering the address types A, B, and C). This situation may be modeled as follows:
+												<div style="padding:10 0 0 0; margin:0 0 0 0">
+							        				<canvas id="C1_p17" data-processing-sources="C1_p17/c1_p17.pde" width="500" height="610"></canvas>
+							        			</div>
+												hence,
+												<br>
+												<br>
+												$\text{Class A:} \ (2^7-2)(2^{24}-2)=2,113,928,964. \ \square$
+												$\text{Class B:} \ 2^{14}(2^{16}-2)=1,073,709,056. \ \square$
+												<br>
+												$\text{Class C:} \ 2^{21}(2^{8}-2)=1,532,676,608. \ \square$
+											</li>
+										</ul>
 									</td>
 								</tr>
 							</table>
