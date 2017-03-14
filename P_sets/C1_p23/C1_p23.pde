@@ -1,7 +1,7 @@
 PFont f;
 void setup() {
   size(320, 230);
-  f = createFont("SourceCodePro-Light", 12);
+  f = createFont("SourceCodePro-Regular", 12);
   background(255);
   noLoop();
   stroke(242);
