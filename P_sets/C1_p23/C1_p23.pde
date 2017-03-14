@@ -57,25 +57,25 @@ void draw(){
 // // // // // // // // Labels
 
   for (int i = 0; i < 4; i ++) {
-    textFont(f,12);
+    textFont(f,13);
     fill(110);
     text("R", 167, (i*45)+70);
 }
 
 for (int i = 0; i < 3; i ++) {
-    textFont(f,12);
+    textFont(f,13);
     fill(110);
-    text("W", 167+58, (i*45)+70);
+    text("W", 167+59, (i*45)+70);
 }
 
 for (int i = 0; i < 2; i ++) {
-    textFont(f,12);
+    textFont(f,13);
     fill(110);
-    text("G", 167+(2*59), (i*45)+70);
+    text("G", 167+(2*60), (i*45)+70);
 }
 
 for (int i = 0; i < 3; i ++) {
-    textFont(f,12);
+    textFont(f,13);
     fill(110);
     text("B", 167+(3*60), (i*45)+70);
 }
