@@ -34,7 +34,12 @@
 		html{
 		   overflow-y: scroll;
 		}
-		code{font-size:14; background: #FAF8F9; color:grey;}
+		code{
+			font-size:13; 
+			background: #FAF8F9; 
+			color:grey;
+			font-family: "SourceCodePro-Regular";
+		}
 
 		.unselectable {
 		    -webkit-touch-callout: none;
@@ -1053,7 +1058,7 @@
 							    <tr>
 							    	<td style="vertical-align:top; padding: 0 0 0 0">11.</td>
 							    	<td style="vertical-align:top; padding: 0 0 0 10">
-							        	Three small towns designated by A, B, and C are interconnected by a system of two-way roads, as shown in Fig. 1.4.
+							        	Three small towns designated by A, B, and C are interconnected by a system of two-way roads, as shown in the figure below.
 							        	<div style="padding:10 0 5 0; margin:0 0 0 50">
 							        		<canvas id="C1_p11" data-processing-sources="C1_p11/c1_p11.pde" width="280" height="240"></canvas>
 							        	</div>
@@ -1306,7 +1311,7 @@
 											<li>
 												(Note: I've replaced the word "class" with the more contemporary notion of "type", i.e., I'll be considering the address types A, B, and C). This situation may be modeled as follows:
 												<div style="padding:10 0 0 0; margin:0 0 0 0">
-							        				<canvas id="C1_p17" data-processing-sources="C1_p17/c1_p17.pde" width="500" height="610"></canvas>
+							        				<canvas id="C1_p17" data-processing-sources="C1_p17/c1_p17.pde" width="500" height="590"></canvas>
 							        			</div>
 												hence,
 												<br>
@@ -1401,8 +1406,8 @@
 									<td style="vertical-align:top; padding: 0 00 0 00">23.</td>
 					        		<td style="vertical-align:top; padding: 0 20 0 10">
 					        			Twelve clay targets (identical in shape) are arranged in four hanging columns, as shown in the figure below. There are four red targets in the first column, three white ones in the second column, two green targets in the third column, and three blue ones in the fourth column. To join her college drill team, Deborah must break all twelve of these targets (using her pistol and only twelve bullets) and in so doing must always break the existing tartget at the bottom of a column. Under these conditions, in how many different orders can Deborah shoot down (and break) the twelve targets?
-					        			<div style="padding:10 0 0 0">
-					        				<canvas id="C1_p23" data-processing-sources="C1_p23/C1_p23.pde" width="480" height="250"></canvas>
+					        			<div style="padding:0 0 0 0" align="center">
+					        				<canvas id="C1_p23" data-processing-sources="C1_p23/C1_p23.pde" width="320" height="230"></canvas>
 					        			</div>
 					        		</td>
 					      		</tr>
@@ -1410,83 +1415,15 @@
 						</div>
 					</td>
 					<td style="vertical-align:top; 
-								padding: 0 0 0 25; 
+								padding: 0 0 0 28; 
 								border-top: 20 solid #f2f2f2; 
 								border-left:1 solid #f2f2f2; 
 								width: 50%">
-						<div style="height: 645; overflow:auto; padding-top:40">
+						<div class="infscrll">
 							<table>
 								<tr>
-									<td style="vertical-align:top; padding: 2 10 0 0">12.</td>
-									<td style="vertical-align:top; padding: 2 10 0 0">(i)</td>
-									<td style="vertical-align:top; padding: 0 00 0 0">
-										<p style="padding: 0 20 0 0">
-											$(|xy|)^2 = (xy)^2 = x^2y^2 = |x|^2|y|^2 = (|x|\cdot|y|)^2.$ Taking the root on both ends of the equation shows that $|xy|=|x|\cdot|y|. \ \ \square$
-										</p>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px">$ \ $</td>
-									<td style="padding-right:15px">(ii)</td>
-									<td style="padding-top:0">
-										By (i), we have $\lvert 1/x \rvert \cdot |x| = \lvert 1/x \cdot x \rvert = |1| = 1,$ therefore $\lvert 1/x \rvert = 1/|x|. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px">$ \ $</td>
-									<td style="padding-right:15px">(iii)</td>
-									<td>
-										$|x|/|y| = |x| \cdot |y|^{-1} = |x| \cdot |y^{-1}| \ \text{by(ii)} = |xy^-1| \ \text{by(i)} = |x/y|. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px">$ \ $</td>
-									<td style="vertical-align:top; padding-right:15px">(iv)</td>
-									<td>$|x-y| = |x+(-y)| \leq |x|+|-y| = |x|+|y|.$ (p.12) $ \ \ \square$</td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px">$ \ $</td>
-									<td style="vertical-align:top; padding-right:15px">(v)</td>
-									<td>It follows from (iv) that $|x| = |y-(y-x)| \leq |y|+|y-x|,$ hence $|x|-|y| \leq |x-y|. \ \ \square$</td>
-								</tr>
-								<tr>
-								<td style="padding-right:10px">$ \ $</td>
-									<td style="vertical-align:top; padding-right:15px">(vi)</td>
-									<td>
-										<p style="padding: 0 20 0 0">
-											Interchanging $x$ and $y$ in (v) returns $|y|-|x| \leq |x-y|.$ Joining this observation with (v) yields $|(|x|-|y|)| \leq |x-y|. \ \ \square$
-										</p>
-									</td>
-								</tr>
-								<tr>
-									<td style="padding-right:10px">$ \ $</td>
-									<td style="vertical-align:top; padding-right:15px">(vii)</td>
-									<td>
-										<p style="padding: 0 20 0 0">
-											$|x+y+z| \leq |x+y|+|z| \leq |x|+|y|+|z|.$ If equality holds, then certainly $|x+y|=|x|+|y|, \ \text{so} \ x \ \text{and} \ y$ have the same sign. Moreover, $z$ must have the same sign as $x+y,$ so $x,y$ and $z$ must all have the same sign (unless either of them is 0). $ \ \ \square$
-										</p>
-									</td>
-								</tr>
-							</table>
-							<table style="padding: 20 0 0 0">
-								<tr>
-									<td style="vertical-align:top; padding-right:10px">13.</td>
-									<td style="vertical-align:top; padding-right:15px">
-										If $x \leq y,$ then $|y-x|=y-x,$ so $x+y+|y-x|=x+y+y-x=2y=$ $2\text{max}(x,y),$ so $y=\text{max}(x,y) = (x+y+|y-x|)/2.$ Interchanging $x$ and $y$ proves the formula when $y \leq x$. Similarly, if $x \leq y,$ then $|y-x| = y-x,$ so $x+y-|y-x|=x+y-(y-x)=2x=2\text{min}(x,y),$ so $x=\text{min}(x,y)=$ $(x+y-|y-x|)/2.$ Also
-
-										$$
-										\begin{align}
-											\begin{split}
-												\displaystyle
-													\text{max}(x,y,z) 
-													&= \text{max}(x, \text{max}(y,z)) \\ \\ 
-													&= \frac{x+\displaystyle\frac{y+z+|y-z|}{2}+\displaystyle {\Large\lvert} \frac{y+z+|y-z|}{2}-x {\Large\rvert}}{2} \\ \\
-													&= \frac{|y-z|+y+z+2x+|y+z+|y-z|-2x|}{4}. \\ \\
-													& \ \square
-											\end{split}
-										\end{align}
-										$$
-									</td>
+									<td style="vertical-align:top; padding: 0 0 0 00">19.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">Hello, World!</td>
 								</tr>
 							</table>
 						</div>
@@ -3089,14 +3026,14 @@
 						          			<br>
 						          			<a class="pset1" onclick="currentDiv(5)">16</a>
 						          			<a class="pset1" onclick="currentDiv(5)">17</a>
-						          			<a class="pset1" onclick="currentDiv(8)">18</a>
-						          			<a class="pset1" onclick="currentDiv(8)">19</a>
-						          			<a class="pset1" onclick="currentDiv(9)">20</a>
-						          			<a class="pset1" onclick="currentDiv(9)">21</a>
-						          			<a class="pset1" onclick="currentDiv(9)">22</a>
-						          			<a class="pset1" onclick="currentDiv(9)">23</a>
-						          			<a class="pset1" onclick="currentDiv(10)">24</a>
-						          			<a class="pset1" onclick="currentDiv(10)">25</a>
+						          			<a class="pset1" onclick="currentDiv(5)">18</a>
+						          			<a class="pset1" onclick="currentDiv(6)">19</a>
+						          			<a class="pset1" onclick="currentDiv(6)">20</a>
+						          			<a class="pset1" onclick="currentDiv(6)">21</a>
+						          			<a class="pset1" onclick="currentDiv(6)">22</a>
+						          			<a class="pset1" onclick="currentDiv(6)">23</a>
+						          			<a class="pset1" onclick="currentDiv(7)">24</a>
+						          			<a class="pset1" onclick="currentDiv(7)">25</a>
 						          			<br>
 						          			&#160;
 						          		</td>

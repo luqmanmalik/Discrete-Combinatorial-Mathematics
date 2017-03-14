@@ -1,7 +1,7 @@
 PFont f;
 void setup(){
-  size(500, 610);
-  f = createFont("SourceCodePro-Light", 12);
+  size(500, 590);
+  f = createFont("SourceCodePro-Regular", 12);
   noLoop();
   noStroke();
   background(255);
@@ -14,8 +14,8 @@ void draw(){
   rect(50, 12, 90, 70);
   textFont(f,12);
   fill(110);
-  text("Network", 71, 40);
-  text("Interface", 70, 60);
+  text("Network", 72, 40);
+  text("Interface", 65, 60);
   
 //  line 1
   stroke(#f2f2f2);
@@ -25,13 +25,15 @@ void draw(){
   fill(#f2f2f2);
   noStroke();
   rect(10, 106, 200, 30);
-  rect(30, 126, 200, 30);
-  rect(50, 146, 200, 30);
+  rect(30, 116, 200, 30);
+  rect(50, 126, 200, 30);
   
 //  32-bit IA
   fill(110);
-  text("32-bit  IA", 120, 167);
-  
+  text("32-bit  IA", 115, 148);
+
+pushMatrix();
+translate(0,-20);
 //  line 2
   stroke(#f2f2f2);
   line(50, 176, 50, 420);
@@ -42,7 +44,6 @@ void draw(){
   textFont(f,12);
   fill(110);
   text("Type", 36, 240);
-  text("32-bit  IA", 120, 167);
   
 //  line 3
   stroke(#f2f2f2);
@@ -86,7 +87,7 @@ void draw(){
   rect(323, 297, 150, 53);
   textFont(f,12); // text
   fill(110);
-  text("24-bit  LA", 370, 330);
+  text("24-bit  LA", 367, 330);
   
 // // // // // // // // // // // // // // // // Type B Structure
 
@@ -115,14 +116,14 @@ translate(0, 110);
   rect(194, 297, 125, 25);
   textFont(f,12); // text
   fill(110);
-  text("14-bit  NN", 226, 315);
+  text("14-bit  NN", 225, 315);
   
 //  16-bit NN
   fill(#f2f2f2);
   rect(323, 297, 150, 53);
   textFont(f,12); // text
   fill(110);
-  text("16-bit  LA", 370, 330);
+  text("16-bit  LA", 366, 330);
   
 //  ¬∀0 || ∀1 NN
   fill(#f2f2f2);
@@ -130,7 +131,7 @@ translate(0, 110);
   textFont(f,12); // text
   fill(110);
   text("¬", 303, 373);
-  text("∀0 || ∀1", 376, 373);
+  text("∀0 || ∀1", 372, 373);
 popMatrix();
 
 // // // // // // // // // // // // // // // // Type C Structure
@@ -164,14 +165,14 @@ translate(0, 210);
   rect(204, 297, 115, 25);
   textFont(f,12); // text
   fill(110);
-  text("21-bit  NN", 230, 315);
+  text("21-bit  NN", 228, 315);
   
 //  8-bit NN
   fill(#f2f2f2);
   rect(323, 297, 150, 53);
   textFont(f,12); // text
   fill(110);
-  text("8-bit  LA", 375, 330);
+  text("8-bit  LA", 370, 330);
   
 //  ¬∀0 || ∀1 NN
   fill(#f2f2f2);
@@ -179,6 +180,7 @@ translate(0, 210);
   textFont(f,12); // text
   fill(110);
   text("¬", 303, 373);
-  text("∀0 || ∀1", 376, 373);
+  text("∀0 || ∀1", 373, 373);
+popMatrix();
 popMatrix();
 }
