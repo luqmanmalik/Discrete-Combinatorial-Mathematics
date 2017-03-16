@@ -76,7 +76,7 @@
 		    padding-top:27
 		}
 		.c1p1 {
-		    height: 635 !important;
+		    height: 642 !important;
 		    overflow: scroll;
 		    font-size:15; 
 		    margin: 0 0 0 45;
@@ -135,49 +135,11 @@
 		a.contents:hover{text-decoration: underline; cursor: default;}
 		i.fa{font-size: 16px;}
 
-		textarea{
-			color:lightgrey;
-			width:500px; height:1000px;
-			font-size: 11px;
-			font-family: 'Arial';
-			letter-spacing: .5px;
-			border-left: 1px solid #f2f2f2; 
-			padding:20px;
-			border-top: 1px solid #f2f2f2;
-			border-right: 1px solid #f2f2f2; 
-			border-bottom: 1px solid #f2f2f2;
+		/*input [type="text"] {
+			color: grey; 
+		}*/
 
-		}
-		textarea:hover{outline: 2px solid #ABDFF5}
-		textarea:focus{color:grey; outline: 2px solid #ABDFF5}
-
-		textarea.two{
-			width:500px; height:300px;
-			font-size: 11px;
-			font-family: 'Arial';
-			letter-spacing: .5px;
-			border-left: 1px solid #f2f2f2; padding:10px;
-			border-top: 40px solid #f2f2f2; padding:10px;
-			border-right: 1px solid #f2f2f2; padding:10px;
-			border-bottom: 1px solid #f2f2f2; padding:10px}
-		}
-		textarea.two:hover{outline: 2px solid #ABDFF5}
-		textarea.two:focus{outline: 2px solid #ABDFF5}
-
-		textarea.three{
-			width:500px; height:500px;
-			font-size: 11px;
-			font-family: 'Arial';
-			letter-spacing: .5px;
-			border-left: 1px solid #f2f2f2; padding:10px;
-			border-top: 40px solid #f2f2f2; padding:10px;
-			border-right: 1px solid #f2f2f2; padding:10px;
-			border-bottom: 1px solid #f2f2f2; padding:10px}
-		}
-		textarea.three:hover{outline: 2px solid #ABDFF5}
-		textarea.three:focus{outline: 2px solid #ABDFF5}
-
-		input [type="submit"] {
+		/*input [type="submit"] {
 			color:grey;
 			margin-top:5;
 			font-size:11;
@@ -192,6 +154,7 @@
 			border: 1 solid grey; 
 			transition: color .1s;
 		}
+		*/
 
 		.dropdown {
 		    position: relative;
@@ -287,6 +250,8 @@
 		    margin:0 20 0 0;
 		}
 
+		.search{border:1 solid #f2f2f2;}
+
 		</style>
 	</head>
 
@@ -311,7 +276,7 @@
 								padding:10 9 0 9; 
 								width:50%; 
 								background:linear-gradient(lightgrey, grey); background-repeat:no-repeat">
-						<p style="padding:15 0 15 40;
+						<p style="padding:14 0 14 40;
 									color:grey; font-family:'Avenir', 'light'; 
 									font-size:18px;  
 									background:linear-gradient(white,#E5E7E9);
@@ -635,19 +600,24 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" style="padding: 20 0 0 0; 
-											margin-left:-10; 
-											width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								width:50%">
-						<p style="padding-top:24; 
-									padding-left:48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45; 
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
 						<div class="c1p1">
 							<table style="padding: 10 0 0 0">
 								<tr>
@@ -841,22 +811,25 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" 
-					style="padding: 20 0 0 0; 
-							margin-left:-10; 
-							width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								padding-right:0; 
-								width:50%">
-						<p style="padding-top:24; 
-									padding-left:48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
-						<div class="c1p4">
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45; 
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
+						<div class="c1p1">
 							<table style="padding: 10 20 0 0">
 								<tr>
 									<td style="vertical-align:top; padding:0 0 0 00">6.</td>
@@ -1031,21 +1004,25 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" 
-					style="padding: 20 0 0 0; 
-							margin-left:-10; 
-							width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								padding-right:0; 
-								width:50%">
-						<p style="padding:24 0 0 48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
-						<div class="c1p6">
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45;
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
+						<div class="c1p1">
 							<table style="padding: 10 20 0 0">
 								<tr>
 									<td style="vertical-align:top; padding: 0 0 0 00">10.</td>
@@ -1199,21 +1176,25 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" 
-					style="padding: 20 0 0 0; 
-							margin-left:-10; 
-							width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								padding-right:0; 
-								width:50%">
-						<p style="padding:24 0 0 48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
-						<div class="c1p6">
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45;
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
+						<div class="c1p1">
 							<table style="padding: 10 0 0 0">
 								<tr>
 									<td style="vertical-align:top; padding: 0 00 0 00">14.</td>
@@ -1337,22 +1318,25 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" 
-				style="padding: 20 0 0 0; 
-						margin-left:-10; 
-						width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								padding-right:0; 
-								width:50%">
-						<p style="padding-top:24; 
-									padding-left:48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
-						<div class="c1p6">
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45;
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
+						<div class="c1p1">
 							<table style="padding: 10 0 0 0">
 								<tr>
 									<td style="vertical-align:top; padding: 0 00 0 00">19.</td>
@@ -1407,7 +1391,7 @@
 					        		<td style="vertical-align:top; padding: 0 20 0 10">
 					        			Twelve clay targets (identical in shape) are arranged in four hanging columns, as shown in the figure below. There are four red targets in the first column, three white ones in the second column, two green targets in the third column, and three blue ones in the fourth column. To join her college drill team, Deborah must break all twelve of these targets (using her pistol and only twelve bullets) and in so doing must always break the existing tartget at the bottom of a column. Under these conditions, in how many different orders can Deborah shoot down (and break) the twelve targets?
 					        			<div style="padding:0 0 0 0" align="center">
-					        				<canvas id="C1_p23" data-processing-sources="C1_p23/C1_p23.pde" width="320" height="230"></canvas>
+					        				<canvas id="C1_p23" data-processing-sources="C1_p23/c1_p23.pde" width="320" height="230"></canvas>
 					        			</div>
 					        		</td>
 					      		</tr>
@@ -1420,10 +1404,72 @@
 								border-left:1 solid #f2f2f2; 
 								width: 50%">
 						<div class="infscrll">
-							<table>
+							<table style="padding:0 20 0 0">
 								<tr>
 									<td style="vertical-align:top; padding: 0 0 0 00">19.</td>
-									<td style="vertical-align:top; padding: 0 0 0 10">Hello, World!</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										We can compute these answers directly, without much fuss.
+										<ol type="a">
+											<li>$7!=5040. \ \square$</li>
+											<li>$4!3!=144. \ \square$</li>
+											<li>$(4!)(5)(3!)=720. \ \square$</li>
+											<li>$(4!)(3!)(2)=288. \ \square$</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+							<table style="padding:0 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">20.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										Again, a straight&ndash;forward computation of permutations with duplicate symbols:
+										<ol type="a">
+											<li>Since the symbol A is repeated three times, we have $8!/(3!1!1!1!1!1!)=6720. \ \square$</li>
+											<li>
+												In this case, we must arrange the six items DTGRMAAA, which can be done in $6!=720$ distinct ways. $\square$
+											</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+							<table style="padding:0 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">21.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										<ol type="a" style="vertical-align:top; padding: 0 0 0 20">
+											<li>
+												$\text{SOCIOLOGICAL = SOOOCCIILLGA}$. Hence, there are $12!/(3!2!2!2!1!1!1!)$ arrangements. $\square$
+											</li>
+											<li>
+												$[11/(3!2!2!2!)] (\succ \text{AG}) + [11/(3!2!2!2!)] (\succ \text{GA}). \ \square$
+											</li>
+											<li>
+												Let us consider one such case, where all the vowels are adjacent: SCLGCL'OIOOIA'. These seven symbols can be arranged in $(7!/2!2!)$ ways. Sice OOOIIA can be arranged on $6!/(3!2!)$ ways, the number of arrangements with all adjacent vowels is $[(7!/2!2!)][6!/(3!2!)]. \ \square$
+											</li>
+										</ol>
+									</td>
+								</tr>
+							</table>
+							<table style="padding:0 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">22.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										Effectively, we are considering the integer $n=x_1x_2 \dots x_m > 5,000,000$.
+										<ol type="a">
+											<li>$[x_1:5] \ \rightarrow \ (6!)/(2!). \ \square$</li>
+											<li>$[x_1:6] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
+											<li>$[x_1:7] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
+										</ol>
+										In total there are $[(6!)/(2!)][1+(1/2)+(1/2)]=6!.$ such positive integers. $\square$
+									</td>
+								</tr>
+							</table>
+							<table style="padding:15 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">23.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										We are looking for the number of ways to arrange twelve objects &mdash; 4 of the first type, three of the second, two of the third, and three of the fourth. There are $12!/(4!3!2!3!)=277,200$ possible ways. $\square$
+									</td>
 								</tr>
 							</table>
 						</div>
@@ -2981,11 +3027,11 @@
 									</a>
 								</div>
 								<div  id="myDropdown" class="dropdown-content">
-								  	<div style="padding:18 0 0 0">
+								  	<div style="padding:17 0 0 0">
 										<a class="pset_title" onclick="currentDiv(1)">
 											Discrete and Combinatorial Mathematics / 5E&ndash;PS
 										</a>
-									  	<div style="float:right; margin-top:0">
+									  	<div style="float:right; margin:0 0 0 0">
 									  		<a class="textnav">&#9508;</a>
 									  		<a class="textnav">&#9500;</a>
 									  	</div>
