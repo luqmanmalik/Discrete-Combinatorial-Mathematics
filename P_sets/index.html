@@ -36,8 +36,17 @@
 		}
 		code{
 			font-size:13; 
-			background: #FAF8F9; 
+			background: #FAF8F9;
 			color:grey;
+			font-family: "SourceCodePro-Regular";
+		}
+		.code_block{
+			color:grey;
+			font-size:13;
+			display:block;
+			margin:10 0 10 0;
+			padding:10 0 10 10;
+			background:#FAF8F9;
 			font-family: "SourceCodePro-Regular";
 		}
 
@@ -134,9 +143,9 @@
 		}
 		a.contents:hover{text-decoration: underline; cursor: default;}
 		i.fa{font-size: 16px;}
-
-		/*input [type="text"] {
-			color: grey; 
+/*
+		input [type="text"]:focus {
+			outline-color:red; 
 		}*/
 
 		/*input [type="submit"] {
@@ -1408,7 +1417,7 @@
 								<tr>
 									<td style="vertical-align:top; padding: 0 0 0 00">19.</td>
 									<td style="vertical-align:top; padding: 0 0 0 10">
-										We can compute these answers directly, without much fuss.
+										We can compute these answers directly, as follows.
 										<ol type="a">
 											<li>$7!=5040. \ \square$</li>
 											<li>$4!3!=144. \ \square$</li>
@@ -1476,193 +1485,267 @@
 					</td>
 				</tr>
 			</table>
-			<table class="mySlides" 
-					style="padding: 20 0 0 0; 
-							margin-left:-10; 
-							width:101%">
+			<table class="mySlides" style="padding: 20 0 0 0; margin-left:-10; width:101%">
 				<tr>
-					<td style="vertical-align:top; 
-								padding-right:0; 
-								width:50%">
-						<p style="padding-top:24; 
-									padding-left:48; 
-									color:lightgrey; 
-									font-family:'Avenir', 'light'; 
-									font-size:18">
-							Fundamental Principles of Counting
-						</p>
-						<div class="c1p12">
-							<table style="padding: 11 0 0 7">
+					<td style="vertical-align:top; width:50%">
+						<table style="padding:20 0 10 45;
+								color:lightgrey; 
+								font-family:'Avenir', 'light'; 
+								font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda;..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
+						<div class="c1p1">
+							<table style="padding:10 0 0 0">
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 00">14.</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(a)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-							        	Prove that $|a|=|-a|.$ (The trick is not to become confused by too many cases. First prove the statement for $a \geq 0$. Why is it then obvious for $a \leq 0$?)
-							        </td>
-							    </tr>
-							    <tr>
-							        <td style="vertical-align:top; padding:0 0 0 00">&nbsp;</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(b)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-							        	Prove that $-b \leq a \leq b$ if and only if $|a| \leq b.$ In particular, it follows that $-|a| \leq a \leq |a|.$
-							        </td>
-							    </tr>
-							    <tr>
-							        <td style="vertical-align:top; padding:0 0 0 00">&nbsp;</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(c)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-							        	Use this fact to give a new proof that $|a+b| \leq |a|+|b|.$
-							        </td>
-							    </tr>
-						    </table>
-						    <table style="padding: 20 0 0 0">
-						    	<tr>
-							      	<td style="vertical-align:top; padding:0 0 0 0">
-							      		<label title="Text" style="color:#aaa">*</label>15.
-							      	</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-							        	Prove that if $x$ and $y$ are not both $0$, then $$x^2+xy+y^2 >0, \\ x^4+x^3y+x^2y^2+xy^3+y^4 >0.$$ 
-							        	<span style="padding:0 0 0 3">Hint: Use Problem 1.</span>
-							        </td>
-						    	</tr>
-						    </table>
-						   	<table style="padding: 20 0 0 0">
-						    	<tr>
-							      	<td style="vertical-align:top; padding:0 0 0 0">
-							      		<label title="Text" style="color:#aaa">*</label>16.
-							      	</td>
-								    <td style="vertical-align:top; padding:0 0 0 10">(a)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-						        		Show that
-						                <table>
-						              		<tr>
-						                    	<td style="padding:0 0 0 10">$(x+y)^2 = x^2+y^2$</td>
-						                    	<td style="padding:0 0 0 20">only when $x=0$ or $y=0$,</td>
-						                	</tr>
-						                	<tr>
-						                    	<td style="padding:0 0 0 10">$(x+y)^3 = x^3+y^3$</td>
-						                    	<td style="padding:0 0 0 20">only when $x=0$ or $y=0$ or $x=-y.$</td>
-						                	</tr>
-						                </table>
-						        	</td>
-						      	</tr>
-						    	<tr>
-						        	<td style="vertical-align:top; padding:0 0 0 00">&nbsp;</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(b)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-						        		Using the fact that $$x^2+2xy+y^2 = (x+y)^2 \geq 0,$$ show that $4x^2+6xy+4y^2 >0$ unless $x$ and $y$ are both $0$.
-						        	</td>
-						    	</tr>
-						      	<tr>
-						        	<td style="vertical-align:top; padding:0 0 0 00">&nbsp;</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(c)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-						        		Use part (b) to find out when $(x+y)^4 = x^4+y^4.$
-						        	</td>
-						      	</tr>
-						      	<tr>
-						        	<td style="vertical-align:top; padding:0 0 0 00">&nbsp;</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">(d)</td>
-							        <td style="vertical-align:top; padding:0 0 0 10">
-						        		Find out when $(x+y)^5 = x^5+y^5.$ Hint: From the assumption $(x+y)^5$ $=x^5+y^5$ you should be able to derive the equation $x^3+2x^2y+y^3 =$ $0,$ if $x,y \neq 0.$ This implies that $(x+y)^3=x^2y+xy^2=xy(x+y).$
-						        	</td>
-						      	</tr>
-						    </table>
-						    <p style="padding-left:44; font-size:16">
-						    	You should now be able to make a good guess as to when $(x+y)^n = x^n+y^n;$ the proof is contained in Problem 11&ndash;63.
-						    </p>
+									<td style="vertical-align:top; padding:0 00 0 00">24.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			Show that for all integers $n,r \geq 0, \ \text{if} \ n+1 > r,$ then
+					        			$$P(n+1,r)=\bigg(\frac{n+1}{n+1-r}\bigg)P(n,r).$$
+					        		</td>
+					      		</tr>
+					    	</table>
+							<table style="padding:0 0 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 00 0 00">25.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			Find the values(s) of $n$ in each of the folloing:
+					        			 <ol type="a">
+					        			 	<li>$P(n,2)=90,$</li>
+					        			 	<li>$P(n,3)=3P(n,2),$</li>
+					        			 	<li>$2P(n,2)+50=P(2n,2).$</li>
+					        			</ol>
+					        		</td>
+					      		</tr>
+					    	</table>
+					    	<table style="padding:0 0 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 00 0 00">26.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			How many different paths in the $xy$&ndash;plane are there from (0,0) to (7,7) if a path proceeds one step at a time by going either one space to the right (R) or one space upward (U)? How many such paths are there from (2,7) to (9,14)? Can any general statement be made that incorporates these two results?
+					        		</td>
+					      		</tr>
+					    	</table>
+					    	<table style="padding: 10 0 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 00 0 0">27.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			<ol type="a" style="padding:0 0 0 20">
+					        				<li>
+					        					How many distinct paths are there from $(-1,2,0)$ to $(1,3,7)$ in Euclidean three&ndash;space? If each move is one of the following types?
+					        					$$
+					        					\begin{align}
+					        						\text{(H):}(x,y,z,) &\rightarrow (x+1,y,z); \\
+							        				\text{(V):}(x,y,z,) &\rightarrow (x,y+1,z); \\
+							        				\text{(A):}(x,y,z,) &\rightarrow (x,y,z+1). \\
+							        			\end{align}
+					        					$$
+					        				</li>
+					        				<li>How many such paths are there from $(1,0,5)$ to $(8,1,7)$?</li>
+					        				<li>Generalize the results in parts (a) and (b).</li>
+					        			</ol>
+					        		</td>
+					      		</tr>
+					    	</table>
+					    	<table style="padding: 10 0 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 00 0 0">28.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			<ol type="a" style="padding:0 0 0 20">
+					        				<li>
+					        					Determine the value of the integer variable counter afer execution of the following program segment. (Here $i,j$ and $k$ are integer variables.)
+					        					<code class="code_block">
+					        						counter := 0
+					        						<br>
+					        						<b>for</b> i := 1 <b>to</b> 12 <b>do</b>
+					        						<br>
+					        						&nbsp; &nbsp; counter := counter + 1
+					        						<br>
+					        						<b>for</b> j := 5 <b>to</b> 10 <b>do</b>
+					        						<br>
+					        						&nbsp; &nbsp; counter := counter + 2
+					        						<br>
+					        						<b>for</b> k := 15 <b>downto</b> 8 <b>do</b>
+					        						<br>
+					        						&nbsp; &nbsp; counter := counter + 3
+					        					</code>
+					        				</li>
+					        				<li>Which counting principle is at play in part (a)?</li>
+					        			</ol>
+					        		</td>
+					      		</tr>
+					    	</table>
+					    	<table style="padding: 10 0 0 0">
+								<tr>
+									<td style="vertical-align:top; padding:0 00 0 0">29.</td>
+					        		<td style="vertical-align:top; padding:0 20 0 10">
+					        			Consider the following program segment where $i,j$ and $k$ are integer variables.
+			        					<code class="code_block">
+			        						counter := 0
+			        						<br>
+			        						<b>for</b> i := 1 <b>to</b> 12 <b>do</b>
+			        						<br>
+			        						&nbsp; <b>for</b> j := 5 <b>to</b> 10 <b>do</b>
+			        						<br>
+			        						&nbsp; &nbsp; <b>for</b> k := 15 <b>downto</b> 8 <b>do</b>
+			        						<br>
+			        						&nbsp; &nbsp; &nbsp; <b>print</b> (i-j) * k <b>downto</b> 8 <b>do</b>
+			        					</code>
+				        				<ol type="a" style="padding:0 0 0 20">
+					        				<li>How many times is the <code>print</code> statement executed?</li>
+					        				<li>Which counting principle is used in part (a)?</li>
+					        			</ol>
+					        		</td>
+					      		</tr>
+					    	</table>
 						</div>
 					</td>
-					<td style="vertical-align:top;
-								width:50%;
-								padding: 0 0 0 25;
-								border-top:20 solid #f2f2f2;
-								border-left:1 solid #f2f2f2">
+					<td style="vertical-align:top; 
+								padding:0 0 0 28; 
+								border-top: 20 solid #f2f2f2; 
+								border-left:1 solid #f2f2f2; 
+								width: 50%">
 						<div class="infscrll">
-							<table style="padding:2 0 0 8">
+							<table style="padding:0 20 0 0">
 								<tr>
-									<td style="vertical-align:top; padding: 0 0 0 00">14.</td>
-									<td style="vertical-align:top; padding: 0 0 0 10">(a)</td>
-									<td style="vertical-align:top; padding: 0 20 0 10">
-										If $0 \leq a,$ then $|a|=a=-(-a)=|-a|,$ since $-a \leq 0.$ Similarly, if $a \leq 0,$ then $|-a|=-a=|a|,$ since $0 \leq -a. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:0 00 0 00">&nbsp;</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(b)</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										If $|a| \leq b,$ then naturally $0 \leq b.$ Now $|a| \leq b$ means that $a \leq b$ if $0 \leq a,$ moreover $a \leq b$ if $a \leq 0.$ Similarly, $|a| \leq b$ means $-a \leq b,$ and hence $-b \leq a,$ if $a \leq 0,$ and surely $-b \leq a$ if $0 \leq a.$ So, $-b \leq a \leq b.$ Conversely, if $-b \leq a \leq b.$ then $|a|=a \leq b$ if $0 \leq a,$ while $|a|=-a \leq b$ if $a \leq 0. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:0 00 0 00">&nbsp;</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(c)</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										From $-|a| \leq a \leq |a|$ and $-|b| \leq b \leq |b|$ it follows that $-(|a|+|b|) \leq a+b \leq |a|+|b| \ \Leftrightarrow \ |a+b| \leq |a|+|b|. \ \ \square$
+									<td style="vertical-align:top; padding:12 0 0 00">24.</td>
+									<td style="vertical-align:top; padding:0 0 0 10">
+										$
+										\begin{equation}
+											\begin{split}
+												\displaystyle
+													P(n+1,r) 
+													&= \frac{(n+1)!}{(n+1-r)!} \\
+													&= \bigg(\frac{n+1}{n+1-r}\bigg)\bigg(\frac{n!}{(n-1)!}\bigg) \\
+													&= \bigg(\frac{n+1}{n+1-r}\bigg)P(n,r). \\
+													& \ \square
+											\end{split}
+										\end{equation}
+										$
 									</td>
 								</tr>
 							</table>
-							<table style="padding:20 0 0 0">
+							 <table style="padding:20 20 0 0">
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 0">
-										<label title="Text" style="color:#aaa">*</label>15.
-									</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										If $x \neq y,$ then
-										<br>
-										$x^2+xy+y^2=\displaystyle\frac{x^3-y^3}{x-y}.$
-										<br> 
-										Problem 6(b) shows that the quotient on the right is always positive (since $0 <$ $x^3-y^3$ if $0 < x-y$ and $x^3-y^3 < 0$ if $x-y < 0$). Moreover, if $x=y \neq 0,$ then $0 < x^2+xy+y^2=3x^2.$ Similarly, if $x \neq y$, then $$x^4+x^3y+x^2y^2+xy^3+y^4=\displaystyle\frac{x^5-y^5}{x-y}.$$ Again, the quotient on the right is always positive, since 0 < $x^5-y^5$ if $0 < x-y$ and $x^5-y^5 < 0$ if $x-y < 0$. In particular, if $x=y \neq 0,$ then $0 < x^4+x^3y+x^2y^2+xy^3+y^4=5x^4. \ \ \square$
+									<td style="vertical-align:top; padding:2 0 0 00">25.</td>
+									<td style="vertical-align:top; padding:0 0 0 10">
+										<table style="padding:0 0 0 0">
+											<tr>
+												<td style="vertical-align:top; padding:0 0 0 00">a)</td>
+												<td style="vertical-align:top; padding:3 0 0 10">
+													$
+													\begin{equation}
+														\begin{split}
+															\require{cancel}
+															\displaystyle
+																P(n,2) &= 90 \\
+																\frac{n!}{(n-2)!} &= 90 \\
+																n! &= 90(n-2)! \\
+																(n)(n-1)! &= 90(n-2)! \\
+																n &= \frac{90(n-2)!}{(n-1)!} \\
+																  &= \frac{90\color{grey}{\cancel{(n-2)!}}}{(n-1)\color{grey}{\cancel{(n-2)!}}} = \frac{90}{(n-1)} \\
+																 10 &= \frac{90}{(10-1)} = 10. \\
+																	& \ \square
+														\end{split}
+													\end{equation}
+													$
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align:top; padding:0 0 0 00">b)</td>
+												<td style="vertical-align:top; padding:6 0 0 10">
+													$
+													\begin{equation}
+														\begin{split}
+															\require{cancel}
+															\displaystyle
+																P(n,3) &= 3P(n,2) \\
+																\frac{n!}{(n-3)!} &= 3\bigg(\frac{n!}{(n-2)!}\bigg) \\
+																\frac{n!}{(n-3)!} \bigg/ \bigg(\frac{n!}{(n-2)!}\bigg) &= 3 \\
+																\bigg(\frac{n!}{(n-3)!}\bigg) \bigg(\frac{(n-2)!}{n!}\bigg) &= \\
+																\bigg(\frac{\color{grey}{\cancel{n!}}}{\color{grey}{\cancel{(n-3)!}}}\bigg) \bigg(\frac{(n-2)\color{grey}{\cancel{(n-3)!}}}{\color{grey}{\cancel{n!}}}\bigg) &= \\
+																n-2 &= 3 \\
+																  n &= 5. \\
+																    & \ \square
+														\end{split}
+													\end{equation}
+													$
+												</td>
+											</tr>
+											<tr>
+												<td style="vertical-align:top; padding:0 0 0 00">c)</td>
+												<td style="vertical-align:top; padding:6 0 10 10">
+													$
+													\begin{equation}
+														\begin{split}
+															\require{cancel}
+															\displaystyle
+																2P(n,2)+50 &= P(2n,2) \\
+																\frac{2n!}{(n-2)!}+50 &= \frac{2n!}{(2n-2)!} \\
+																\frac{2n!(n-1)\color{grey}{\cancel{(n-2)!}}}{\color{grey}{\cancel{(n-2)!}}}+50 &= \frac{2n!(2n-1)\color{grey}{\cancel{(n-2)!}}}{\color{grey}{\cancel{(n-2)!}}} \\
+																2n!(n-1)+50 &= 2n!(2n-1) \\
+																2[n!(n-1)+25] &= 2n!(2n-1) \\
+																n!(n-1)+25 &= n!(2n-1) \\
+																25 &= n!(2n-1)-n!(n-1) \\
+																25 &= n![(2n-1)-(n-1)] \\
+																    & \ \square
+														\end{split}
+													\end{equation}
+													$
+												</td>
+											</tr>
+										</table>
 									</td>
 								</tr>
 							</table>
-							<table style="padding:20 0 0 0">
+							<!-- <table style="padding:0 20 0 0">
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 0">
-										<label title="Spivak" style="color:#aaa">*</label>16.
-									</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(a)</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										If $x^2+y^2=(x+y)^2=x^2+2xy+y^2,$ then $xy=0, \ \text{so} \ x=0 \ \text{or} \ y=0.$ If $$x^3+y^3=(x+y)^3=x^3+3x^2y+3xy^2+y^3,$$ Then, $3xy(x+y)=0, \ \text{so} \ x=0 \ \text{or} \ y=0, \ \text{or} \ x=-y. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:0 00 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(b)</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										The first equation implies that 
-										$$4x^2+8xy+4y^2 \geq 0.$$ 
-										Suppose that we also had 
-										$$4x^2+6xy+4y^2 \leq 0.$$ 
-										Subtracting the second from the first would give $0 \leq 2xy.$ If neither $x$ nor $y$ is 0, this means that we must have $0 < 2xy;$ but this implies that $0 < 4x^2+6xy+4y^2,$ a contradiction. Moreover, it is clear that if one of $x$ and $y$ is 0, but not the other, then we also have $0 < 4x^2+6xy+y^2. \ \ \square$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:0 00 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(c)</td>
-									<td style="vertical-align:top; padding:0 20 0 10">
-										If $x^4+y^4=(x+y)^4=x^4+4x^3y+6x^2y^2+4xy^3+y^4,$ then 
-										$$0 = 4x^3y+6x^2y^2+4xy^3 \color{grey}{= xy(4x^2+xy+4y^2)},$$
-										so $x=0 \ \text{or} \ y=0 \ \text{or} \ 4x^2+xy+4y^2=0.$ But by part (b), the <span style="color:grey">last equation</span> suggests that $x$ and $y$ are both 0. So we must always have $x=0$ or $y=0.$
-									</td>
-								</tr>
-								<tr>
-									<td style="vertical-align:top; padding:0 00 0 0">&nbsp;</td>
-									<td style="vertical-align:top; padding:0 00 0 10">(d)</td>
-									<td style="vertical-align:top; padding:0 20 15 10">
-										If $x^5+y^5=(x+y)^5=x^5+5x^4y+10x^3y^2+10x^2y^3+5xy^4+y^5,$ then 
-										$$
-										\begin{align}
-										0 &= 5x^4y+10x^3y^2+10x^2y^3+5xy^4 \\
-										  &= 5xy(x^3+2x^2y+2xy^2+y^3),
-										\end{align}
-										$$
-										so $xy=0$ or $x^3+2x^2y+2xy^2+y^3=0.$
-										<br>
-										Subtrating this equation from $$(x+y)^3=x^3+3x^2y+3xy^2+y^3$$ we obtain $$(x+y)^3=x^2y+xy^2=xy(x+y).$$ So either $x+y=0$ or $(x+y)^2=xy;$ the latter condition implies that $x^2+xy+y^2=0,$ so $x=0$ or $y=0$ by Problem 15. Hence $x=0$ or $y=0$ or $x=-y. \ \ \square$
+									<td style="vertical-align:top; padding: 0 0 0 00">21.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										<ol type="a" style="vertical-align:top; padding: 0 0 0 20">
+											<li>
+												$\text{SOCIOLOGICAL = SOOOCCIILLGA}$. Hence, there are $12!/(3!2!2!2!1!1!1!)$ arrangements. $\square$
+											</li>
+											<li>
+												$[11/(3!2!2!2!)] (\succ \text{AG}) + [11/(3!2!2!2!)] (\succ \text{GA}). \ \square$
+											</li>
+											<li>
+												Let us consider one such case, where all the vowels are adjacent: SCLGCL'OIOOIA'. These seven symbols can be arranged in $(7!/2!2!)$ ways. Sice OOOIIA can be arranged on $6!/(3!2!)$ ways, the number of arrangements with all adjacent vowels is $[(7!/2!2!)][6!/(3!2!)]. \ \square$
+											</li>
+										</ol>
 									</td>
 								</tr>
 							</table>
+							<table style="padding:0 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">22.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										Effectively, we are considering the integer $n=x_1x_2 \dots x_m > 5,000,000$.
+										<ol type="a">
+											<li>$[x_1:5] \ \rightarrow \ (6!)/(2!). \ \square$</li>
+											<li>$[x_1:6] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
+											<li>$[x_1:7] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
+										</ol>
+										In total there are $[(6!)/(2!)][1+(1/2)+(1/2)]=6!.$ such positive integers. $\square$
+									</td>
+								</tr>
+							</table>
+							<table style="padding:15 20 0 0">
+								<tr>
+									<td style="vertical-align:top; padding: 0 0 0 00">23.</td>
+									<td style="vertical-align:top; padding: 0 0 0 10">
+										We are looking for the number of ways to arrange twelve objects &mdash; 4 of the first type, three of the second, two of the third, and three of the fourth. There are $12!/(4!3!2!3!)=277,200$ possible ways. $\square$
+									</td>
+								</tr>
+							</table> -->
 						</div>
 					</td>
 				</tr>
