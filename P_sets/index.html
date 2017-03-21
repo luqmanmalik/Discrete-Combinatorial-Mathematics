@@ -137,7 +137,7 @@
 		a.pset_title{color: white; text-decoration: none; font-size: 18; font-weight: 500}
 		a.pset_title:hover{color:lightgrey; transition: color .1s;}
 		
-		a.textnav{color: white; font-size: 15; font-weight: 900;}
+		a.textnav{color: white; font-size: 18; font-weight: 500;}
 		a.textnav:hover{text-decoration: underline; cursor:default;}
 		/*a:active{color: grey !important}*/
 		a.two{color:lightgrey; text-decoration: none}
@@ -380,6 +380,14 @@
 							</a>
 						</td>
 					</tr>
+					<tr>
+						<td style="vertical-align:top">1.6</td>
+						<td style="padding-left:15px">
+							<a class="contents">
+								Supplementary Exercises
+							</a>
+						</td>
+					</tr>
 				</table>
 				<table style="color:grey; padding-top:21">
 					<tr>
@@ -426,6 +434,14 @@
 						<td style="padding-left:15px">
 							<a class="contents">
 								Quantifiers, Definitions, and the Proofs of Theorenms
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top">2.6</td>
+						<td style="padding-left:15px">
+							<a class="contents">
+								Supplementary Exercises
 							</a>
 						</td>
 					</tr>
@@ -1189,7 +1205,7 @@
 												This is equivalent to asking: "In how many ways can we permute 8 objects selected from a set of 8 objects?," which is equal to  $P(8,8)=8!. \ \square$
 											</li>
 											<li>
-												In the former case, we simply fix $t$, and permute the remaining list $(7!)$ &mdash; in the latter, we fix $t \ \text{and} \ c,$ and permute the middle list $(6)!. \ \square$
+												In the former case, we simply fix $t$, and permute the remaining list $(7!)$ &mdash; in the latter, we fix $t \ \text{and} \ c,$ and permute the middle list $(6!). \ \square$
 											</li>
 										</ol>
 									</td>
@@ -1729,8 +1745,8 @@
 										For $(0,0) \rightarrow (7,7),$ two such paths may look like the following:
 										<table style="vertical-align:top; padding:0 20 9 0">
 											<tr>
-												<td>
-													<canvas id="myCanvas" width="293" height="185"></canvas>
+												<td style="vertical-align:top; padding:0 0 0 0">
+													<canvas id="myCanvas" width="221" height="185"></canvas>
 												    <script>
 												        var canvas = document.getElementById('myCanvas');
 												        var context = canvas.getContext('2d');
@@ -1814,15 +1830,15 @@
 												        context.strokeStyle = '#E74C3C';
 												        context.stroke();
 												        // point
-												                context.fillStyle = 'black';
+												        context.fillStyle = 'black';
 												        context.fillRect(13.5, 156.3, 3, 3);
 												        context.fillRect(216.5, 8.4, 3, 3);
 												    </script>
 												    <br>
     												<span style="padding:0 0 0 110px">(a)</span>
 												</td>
-												<td>
-													<canvas id="canv2" width="293" height="185"></canvas>
+												<td style="vertical-align:top; padding:0 0 0 40">
+													<canvas id="canv2" width="221" height="185"></canvas>
 												    <script>
 												        var canvas = document.getElementById('canv2');
 												        var context = canvas.getContext('2d');
@@ -1922,7 +1938,7 @@
 											</tr>
 										</table>
 										<span>
-											Notice that no matter what path we take, the move&ndash;combintion will always consit of 7Rs and 7Us. That is to say, we are looking for the number of permutations of the array $\{\text{R,R,R,R,R,R,R,U,U,U,U,U,U,U}\} \ \Rightarrow \ 14!/7!7!$ The numbers are the same for $(2,7) \rightarrow (9,14). \ \square$
+											Notice that no matter what path we take, the move&ndash;combintion will always consit of 7Rs and 7Us. That is to say, we are looking for the number of permutations of the array $\{\text{R,R,R,R,R,R,R,U,U,U,U,U,U,U}\} \ \Rightarrow \ 14!/(7!7!).$ The numbers are the same for $(2,7) \rightarrow (9,14).$ In general, for nonnegative integers $m,n,$ and any real numbers $x,y,$ the number of such paths from $(x,y)$ to $(x+m,y+n)$ is $(m+n)!/(m!n!). \ \square$
 										</span>
 									</td>
 								</tr>
@@ -1931,13 +1947,19 @@
 								<tr>
 									<td style="vertical-align:top; padding: 0 0 0 00">27.</td>
 									<td style="vertical-align:top; padding: 0 0 0 10">
-										Effectively, we are considering the integer $n=x_1x_2 \dots x_m > 5,000,000$.
+										I've plotted and labeled both situations, (a) and (b), in the coordinate system below.
+										<img src="c1_p27.png" style="padding:30 0 0 0">
 										<ol type="a">
-											<li>$[x_1:5] \ \rightarrow \ (6!)/(2!). \ \square$</li>
-											<li>$[x_1:6] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
-											<li>$[x_1:7] \ \rightarrow \ (6!)/(2!)^2. \ \square$</li>
+											<li>
+												Each path consits of 2 horizontal, 1 vertical, and 7 axial moves. Hence, there are $10!/(2!1!7!)$ ways to arrange these 10 moves, which yields the number of paths. $\square$
+											</li>
+											<li>
+												Again, there are $10!/(2!1!7!)$ available paths. $\square$
+											</li>
+											<li>
+												If $x,y,z$ are any real numbers, and  $m,n,p$ are nonnegative integers, then the number of paths from $(x,y,z)$ to $(x+m,y+n,z+p)$ is $(m+n+p)!/(m!n!p!). \ \square$
+											</li>
 										</ol>
-										In total there are $[(6!)/(2!)][1+(1/2)+(1/2)]=6!.$ such positive integers. $\square$
 									</td>
 								</tr>
 							</table>
@@ -3325,8 +3347,8 @@
 								  	<br>
 								  	<hr class="style-two">
 								  	<div class="infscrll_dc">
-								  		<p class="drop_table">Fundamental Principles of Counting</p>
-							        	<table style="width:100%; padding:10 0 0 0">
+								  		<p class="drop_table">Fundamentals of Discrete Mathematics</p>
+							        	<table style="width:100%; padding:10 0 10 0">
 								          	<tr>
 								          		<td><a class="pset" onclick="currentDiv(2)">1.1&ndash;1.2</a></td>
 								          		<td><a class="pset">1.3</a></th>
@@ -3468,7 +3490,7 @@
 								          		<th>&#160;</th>
 								          	</tr>
 								          	<tr>
-								          		<td><a class="pset" style="cursor:default">++</th>
+								          		<td><a class="pset" style="cursor:default">1.6</th>
 								          		<td><a class="pset" style="cursor:default">2.1<a/></th>
 								          		<td><a class="pset" style="cursor:default">2.2</a></th>
 								          		<td><a class="pset" style="cursor:default">2.3</a></th>
@@ -3572,127 +3594,119 @@
 								          		<th>&#160;</th>
 								          	</tr>
 								          	<tr>
-								          		<td><a class="pset" href="#">2.4</a></th>
-								          		<td><a class="pset" href="#">2.5</a></th>
-								          		<td><a class="pset" href="#">++</a></th>
-								          		<td><a class="pset" href="#">3.1</a></th>
+								          		<td><a class="pset">2.4</a></th>
+								          		<td><a class="pset">2.5</a></th>
+								          		<td><a class="pset">2.6</a></th>
+								          		<td><a class="pset">3.1</a></th>
 								          	</tr>
 								          	<tr>
 								          		<td style="vertical-align:top; padding:0 0 0 0">
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
+								          			<a class="pset1" onclick="currentDiv(7)">17</a>
+								          			<a class="pset1" onclick="currentDiv(7)">18</a>
+								          			<a class="pset1" onclick="currentDiv(7)">19</a>
+								          			<a class="pset1" onclick="currentDiv(8)">20</a>
+								          			<a class="pset1" onclick="currentDiv(8)">21</a>
+								          			<a class="pset1" onclick="currentDiv(8)">22</a>
+								          			<a class="pset1" onclick="currentDiv(8)">23</a>
+								          			<a class="pset1" onclick="currentDiv(9)">24</a>
+								          			<a class="pset1" onclick="currentDiv(9)">25</a>
 								          		</td>
 								          		<td style="vertical-align:top; padding:0 0 0 0">
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
+								          			<a class="pset1" onclick="currentDiv(7)">17</a>
+								          			<a class="pset1" onclick="currentDiv(7)">18</a>
+								          			<a class="pset1" onclick="currentDiv(7)">19</a>
+								          			<a class="pset1" onclick="currentDiv(8)">20</a>
+								          			<a class="pset1" onclick="currentDiv(8)">21</a>
+								          			<a class="pset1" onclick="currentDiv(8)">22</a>
+								          			<a class="pset1" onclick="currentDiv(8)">23</a>
+								          			<a class="pset1" onclick="currentDiv(9)">24</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
+								          			<a class="pset1" onclick="currentDiv(7)">17</a>
+								          			<a class="pset1" onclick="currentDiv(7)">18</a>
+								          			<a class="pset1" onclick="currentDiv(7)">19</a>
+								          			<a class="pset1" onclick="currentDiv(8)">20</a>
+								          			<a class="pset1" onclick="currentDiv(8)">21</a>
+								          			<a class="pset1" onclick="currentDiv(8)">22</a>
+								          			<a class="pset1" onclick="currentDiv(8)">23</a>
+								          			<a class="pset1" onclick="currentDiv(9)">24</a>
+								          			<a class="pset1" onclick="currentDiv(9)">25</a>
+								          			<a class="pset1" onclick="currentDiv(9)">26</a>
 								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(6)">27</a>
+								          			<a class="pset1" onclick="currentDiv(6)">28</a>
+								          			<a class="pset1" onclick="currentDiv(6)">29</a>
+								          			<a class="pset1" onclick="currentDiv(7)">30</a>
 								          		</td>
 								          	</tr>
 								          	<tr>
@@ -3702,131 +3716,85 @@
 								          		<th>&#160;</th>
 								          	</tr>
 								          	<tr>
-								          		<td><a class="pset" href="#">Integrals</a></th>
-								          		<td><a class="pset" href="#">The Fundamental Theorem of Calculus</a></th>
-								          		<td><a class="pset" href="#">The Trigonometric Functions</a></th>
-								          		<td><a class="pset" href="#">&pi; is Irrational</a></th>
+								          		<td><a class="pset">3.2</a></th>
+								          		<td><a class="pset">3.3</a></th>
+								          		<td><a class="pset">3.4</a></th>
+								          		<td><a class="pset">3.5</a></th>
 								          	</tr>
 								          	<tr>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
+								          			<a class="pset1" onclick="currentDiv(7)">17</a>
+								          			<a class="pset1" onclick="currentDiv(7)">18</a>
+								          			<a class="pset1" onclick="currentDiv(7)">19</a>
+								          			<a class="pset1" onclick="currentDiv(8)">20</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
-								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(1)">01</a>
+								          			<a class="pset1" onclick="currentDiv(1)">02</a>
+								          			<a class="pset1" onclick="currentDiv(1)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(4)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(5)">12</a>
+								          			<a class="pset1" onclick="currentDiv(5)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(6)">14</a>
+								          			<a class="pset1" onclick="currentDiv(6)">15</a>
+								          			<a class="pset1" onclick="currentDiv(6)">16</a>
+								          			<a class="pset1" onclick="currentDiv(7)">17</a>
 								          		</td>
 								          	</tr>
 								          	<tr>
@@ -3836,131 +3804,407 @@
 								          		<th>&#160;</th>
 								          	</tr>
 								          	<tr>
-								          		<td><a class="pset" href="#">Planetary Motion</a></th>
-								          		<td><a class="pset" href="#">The Logarithmic + Exponential Functions</a></th>
-								          		<td><a class="pset" href="#">Integration in Elementary Terms</a></th>
-								          		<td><a class="pset" href="#">Approximation by Polynomial Functions</a></th>
+								          		<td><a class="pset">3.6</a></th>
+								          		<td><a class="pset">3.7</a></th>
+								          		<td><a class="pset">3.8</a></th>
+								          		<td><a class="pset">4.1</a></th>
 								          	</tr>
 								          	<tr>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
 								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          			<a class="pset1" onclick="currentDiv(5)">29</a>
+								          			<a class="pset1" onclick="currentDiv(5)">30</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
-								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
 								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          			<a class="pset1" onclick="currentDiv(5)">29</a>
+								          			<a class="pset1" onclick="currentDiv(5)">30</a>
+								          			<a class="pset1" onclick="currentDiv(5)">31</a>
+								          			<a class="pset1" onclick="currentDiv(5)">32</a>
+								          			<a class="pset1" onclick="currentDiv(5)">33</a>
+								          			<a class="pset1" onclick="currentDiv(5)">34</a>
+								          			<a class="pset1" onclick="currentDiv(5)">35</a>
+								          			<a class="pset1" onclick="currentDiv(5)">36</a>
+								          			<a class="pset1" onclick="currentDiv(5)">37</a>
+								          			<a class="pset1" onclick="currentDiv(5)">38</a>
+								          			<a class="pset1" onclick="currentDiv(5)">39</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">40</a>
+								          			<a class="pset1" onclick="currentDiv(5)">41</a>
+								          			<a class="pset1" onclick="currentDiv(5)">42</a>
+								          			<a class="pset1" onclick="currentDiv(5)">43</a>
+								          			<a class="pset1" onclick="currentDiv(5)">44</a>
+								          			<a class="pset1" onclick="currentDiv(5)">45</a>
 								          		</td>
-								          		<td>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">1</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">2</a>
-								          			<a class="pset1" onclick="currentDiv(1)" href="#">3</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">4</a>
-								          			<a class="pset1" onclick="currentDiv(2)" href="#">5</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">6</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">7</a>
-								          			<a class="pset1" onclick="currentDiv(3)" href="#">8</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">9</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">10</a>
-								          			<a class="pset1" onclick="currentDiv(4)" href="#">11</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">12</a>
-								          			<a class="pset1" onclick="currentDiv(5)" href="#">13</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">14</a>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">15</a>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
 								          			<br>
-								          			<a class="pset1" onclick="currentDiv(6)" href="#">16</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">17</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">18</a>
-								          			<a class="pset1" onclick="currentDiv(7)" href="#">19</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">20</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">21</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">22</a>
-								          			<a class="pset1" onclick="currentDiv(8)" href="#">23</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">24</a>
-								          			<a class="pset1" onclick="currentDiv(9)" href="#">25</a>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
 								          			<br>
-								          			&#160;
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          		</td>
+								          		</td>
+								          	</tr>
+								          	<tr>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          	</tr>
+								          	<tr>
+								          		<td><a class="pset">4.2</a></th>
+								          		<td><a class="pset">4.3</a></th>
+								          		<td><a class="pset">4.4</a></th>
+								          		<td><a class="pset">4.5</a></th>
+								          	</tr>
+								          	<tr>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          			<a class="pset1" onclick="currentDiv(5)">29</a>
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          		</td>
+								          		</td>
+								          	</tr>
+								          	<tr>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          		<th>&#160;</th>
+								          	</tr>
+								          	<tr>
+								          		<td><a class="pset">4.6</a></th>
+								          		<td><a class="pset">5.1</a></th>
+								          		<td><a class="pset">5.2</a></th>
+								          		<td><a class="pset">5.3</a></th>
+								          	</tr>
+								          	<tr>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          			<a class="pset1" onclick="currentDiv(5)">29</a>
+								          			<a class="pset1" onclick="currentDiv(5)">30</a>
+								          			<a class="pset1" onclick="currentDiv(6)">31</a>
+								          			<a class="pset1" onclick="currentDiv(6)">32</a>
+								          			<a class="pset1" onclick="currentDiv(6)">33</a>
+								          			<a class="pset1" onclick="currentDiv(6)">34</a>
+								          			<a class="pset1" onclick="currentDiv(6)">35</a>
+								          			<a class="pset1" onclick="currentDiv(7)">36</a>
+								          			<a class="pset1" onclick="currentDiv(7)">37</a>
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			&nbsp;
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          			<a class="pset1" onclick="currentDiv(6)">20</a>
+								          			<a class="pset1" onclick="currentDiv(6)">21</a>
+								          			<a class="pset1" onclick="currentDiv(6)">22</a>
+								          			<a class="pset1" onclick="currentDiv(6)">23</a>
+								          			<a class="pset1" onclick="currentDiv(7)">24</a>
+								          			<a class="pset1" onclick="currentDiv(7)">25</a>
+								          			<a class="pset1" onclick="currentDiv(7)">26</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">27</a>
+								          			<a class="pset1" onclick="currentDiv(5)">28</a>
+								          		</td>
+								          		<td style="vertical-align:top; padding:0 0 0 0">
+								          			<a class="pset1" onclick="currentDiv(2)">01</a>
+								          			<a class="pset1" onclick="currentDiv(2)">02</a>
+								          			<a class="pset1" onclick="currentDiv(2)">03</a>
+								          			<a class="pset1" onclick="currentDiv(2)">04</a>
+								          			<a class="pset1" onclick="currentDiv(2)">05</a>
+								          			<a class="pset1" onclick="currentDiv(3)">06</a>
+								          			<a class="pset1" onclick="currentDiv(3)">07</a>
+								          			<a class="pset1" onclick="currentDiv(3)">08</a>
+								          			<a class="pset1" onclick="currentDiv(3)">09</a>
+								          			<a class="pset1" onclick="currentDiv(4)">10</a>
+								          			<a class="pset1" onclick="currentDiv(4)">11</a>
+								          			<a class="pset1" onclick="currentDiv(4)">12</a>
+								          			<a class="pset1" onclick="currentDiv(4)">13</a>
+								          			<br>
+								          			<a class="pset1" onclick="currentDiv(5)">14</a>
+								          			<a class="pset1" onclick="currentDiv(5)">15</a>
+								          			<a class="pset1" onclick="currentDiv(5)">16</a>
+								          			<a class="pset1" onclick="currentDiv(5)">17</a>
+								          			<a class="pset1" onclick="currentDiv(5)">18</a>
+								          			<a class="pset1" onclick="currentDiv(6)">19</a>
+								          		</td>
 								          		</td>
 								          	</tr>
 								        </table>
@@ -3971,7 +4215,7 @@
 						<td style="position:fixed; top:3.5; right:10">
 							<div class="container">
 								<div style="float:left">
-									<a onclick="plusDivs(-1)" style="cursor:default; font-size:15px">&#9508;</a>
+									<a onclick="plusDivs(-1)" style="cursor:default; font-size:15">&#9508;</a>
 								</div>
 								<script>
 									function myFunction() {
@@ -3994,7 +4238,7 @@
 									}
 								</script>
 								<div style="float:left">
-									<a onclick="plusDivs(1)" style="cursor:default; font-size:15px">&#9500;</a>
+									<a onclick="plusDivs(1)" style="cursor:default; font-size:15">&#9500;</a>
 								</div>
 							</div>
 						</td>
