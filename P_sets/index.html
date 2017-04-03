@@ -2170,11 +2170,150 @@
 										</td>
 									</tr>
 								</table>
+								<table style="padding:20 20 20 0; width:95%">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 0">34.</td>
+										<td style="vertical-align:top; padding:0 0 0 0">
+											Let us consider the relevant cases, where $i_j \in INT$:
+											$$
+											INT=
+											\begin{cases}
+											\\
+												\displaystyle
+													+4!/2!, && i_0:\langle n_1 \ n_2 \ n_3 \ n_4 \rangle \\ \\
+													+4!, && i_1:\langle n_1 \ n_2 \ 7 \ 3 \rangle \\
+												\displaystyle
+													+(2)\bigg(\frac{4!}{2!}\bigg), && i_2:\langle n_1 \ 7 \ 3 \ 3 \rangle \\ \\
+												\displaystyle
+													+4!/2!, && i_3:\langle n_1 \ n_2 \ 7 \ 7 \rangle \\ \\
+												\displaystyle
+													+(2)\bigg(\frac{4!}{2!}\bigg), && i_4:\langle n_1 \ 7 \ 7 \ 3 \rangle \\ \\
+												\displaystyle
+													+\bigg(\frac{4!}{2!2!}\bigg), && i_5:\langle 7 \ 7 \ 3 \ 3 \rangle \\ \\
+											\end{cases}
+											$$
+											In total, we have 102 such four&ndash;digit integers. $\square$
+										</td>
+									</tr>
+								</table>
+								<table style="padding:0 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">35.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											<ol type="a" style="padding:0 0 0 20">
+												<li>
+													If arrangements are considered to be the same when one can be obtained from the other by rotation, then we have
+													<div style="padding:08 0 10 0">
+														<canvas id="myCanvas4" width="500" height="140"></canvas>
+													    <script>
+													    	var canvas = document.getElementById('myCanvas4');
+													    	var context = canvas.getContext('2d');
+													    	var centerX = canvas.width / 10;
+													    	var centerY = canvas.height / 2.8;
+													    	var radius = 30;
+													      
+													    	// Tables
+													    	for(i=0; i<4; i++){
+													      		context.beginPath();
+													      		context.arc(centerX+130*i, centerY, radius, 0, 2 * Math.PI, false);
+													      		context.fillStyle = '#f2f2f2';
+													      		context.fill();
+													      		context.lineWidth = 1;
+													    	}
+													      
+													    	// Equality signs
+													    	context.font = "13px SourceCodePro-Regular";
+													    	context.fillStyle = '#aaa';
+													    	context.fillText("=", 110, 56);
+													    	context.fillText("\u2260", 240, 56);
+													    	context.fillText("\u2260", 370, 56);
+													    	// T1_letters
+													    	context.fillText("A", 32,16);
+													    	context.fillText("B", 59,16);
+													    	context.fillText("C", 85,45);
+													    	context.fillText("D", 85,65);
+													    	context.fillText("E", 47,95);
+													    	context.fillText("F", 6,65);
+													    	context.fillText("G", 6,45);
+													    	// T2_letters
+													    	context.fillText("G", 33+130,16);
+													    	context.fillText("A", 58+130,16);
+													    	context.fillText("B", 85+130,45);
+													    	context.fillText("C", 85+130,65);
+													    	context.fillText("D", 47+130,95);
+													    	context.fillText("E", 6+130,65);
+													    	context.fillText("F", 6+130,45);
+													    	// T3_letters
+													    	context.fillText("G", 33+260,16);
+													    	context.fillText("A", 58+260,16);
+													    	context.fillText("C", 85+260,45);
+													    	context.fillText("B", 85+260,65);
+													    	context.fillText("D", 47+260,95);
+													    	context.fillText("E", 6+260,65);
+													    	context.fillText("F", 6+260,45);
+													    	// T2_letters
+													    	context.fillText("G", 33+390,16);
+													    	context.fillText("A", 58+390,16);
+													    	context.fillText("D", 85+390,45);
+													    	context.fillText("C", 85+390,65);
+													    	context.fillText("B", 47+390,95);
+													    	context.fillText("E", 6+390,65);
+													    	context.fillText("F", 6+390,45);
+
+														    // Line2
+														    context.beginPath();
+														    context.moveTo(180, 105);
+														    context.lineTo(180, 131);
+														    context.lineWidth = 1;
+														    context.strokeStyle = '#aaa';
+														    context.stroke();
+														    // Line2
+														    context.beginPath();
+														    context.moveTo(180, 130);
+														    context.lineTo(300, 130);
+														    context.lineWidth = 1;
+														    context.strokeStyle = '#aaa';
+														    context.stroke();
+														    // ≠
+														    context.fillText("\u2260", 47+260,135);
+														    // Line3
+														    context.beginPath();
+														    context.moveTo(440, 105);
+														    context.lineTo(440, 131);
+														    context.lineWidth = 1;
+														    context.strokeStyle = '#aaa';
+														    context.stroke();
+														    // Line4
+														    context.beginPath();
+														    context.moveTo(321, 130);
+														    context.lineTo(440, 130);
+														    context.lineWidth = 1;
+														    context.strokeStyle = '#aaa';
+														    context.stroke();
+													    </script>
+												    </div>
+												    So, inasmuch as each circular arrangement corresponds to seven linear arrangements, we have $7\times[n(\text{|||}^C:A,\dots,G)]=n(\text{|||}^L:A,\dots,G)=7!,$ where "$|||$" denotes arrangment / sorting. Consequently, there are $7!/7=6!=720$ arrangements of $A,B,\dots,G$ around a circular table. $\square$
+												</li>
+												<li>
+													Suppose $A$ and $B$ insist on sitting next to each other. Then we are concerned with the cases 
+													$$
+													(A,B)=
+													\begin{cases}
+														+5!, && \langle A \ B \rangle \\
+														+5!, && \langle B \ A \rangle 
+													\end{cases}
+													$$
+													and there are $2(5!)$ such possible seating arrangments. $\square$
+												</li>
+											</ol>
+										</td>
+									</tr>
+								</table>
 							</div>
 						</td>
 					</tr>
 				</table>
-					<table class="mySlides" style="margin:30 0 0 0; padding:0 0 0 0; width:100%; height:100%; border-collapse: collapse">
+				<table class="mySlides" style="margin:30 0 0 0; padding:0 0 0 0; width:100%; height:100%; border-collapse: collapse">
 					<tr>
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 45; color:lightgrey; font-family:'Avenir', 'light'; font-size:18; width:100%">
@@ -2190,123 +2329,154 @@
 								</tr>
 							</table>
 							<div class="c1p1">
-								<table style="padding:10 20 0 0">
+								<table style="padding:20 20 0 0">
 									<tr>
-										<td style="vertical-align:top; padding:0 0 0 00">36.</td>
+										<td style="vertical-align:top; padding:0 0 0 00">37.</td>
 										<td style="vertical-align:top; padding:0 0 0 10">
-											Hello, Grimaldi!
+											<ol type="a" style="padding:0 0 0 20">
+												<li>
+													In how many ways can eight people, denoted $A,B,\dots,H$ be seated about the square table show in the figure below?
+												</li>
+												<li>
+													If two of the eight, say $A$ and $B$, do not get along well, how many different seatings are possible with $A$ and $B$ not sitting next to each other?
+													<div style="margin:5 0 5 0">
+														<canvas id="myCanvas5" width="500" height="85"></canvas>
+													    <script>
+													    	var canvas = document.getElementById('myCanvas5');
+													    	var context = canvas.getContext('2d');
+													    	var centerX = canvas.width / 10;
+													    	var centerY = canvas.height / 1.7;
+													      
+													    	// Tables
+													    	for(i=0; i<3; i++){
+													      	context.beginPath();
+													      	context.rect(20+130*i,20,centerX,centerY);
+													      	context.fillStyle = '#f2f2f2';
+													      	context.fill();
+													    	}
+													      
+													   		// Equality signs
+													    	context.font = "13px SourceCodePro-Regular";
+													    	context.fillStyle = '#aaa';
+													    	context.fillText("=", 107, 50);
+													    	context.fillText("\u2260", 239, 50);
+
+													    	// T1_letters
+													    	context.fillText("A", 30,16);
+													    	context.fillText("B", 54,16);
+													    	context.fillText("C", 75,35);
+													    	context.fillText("D", 75,65);
+													    	context.fillText("E", 55,85);
+													    	context.fillText("F", 26,85);
+													    	context.fillText("G", 6,65);
+													    	context.fillText("H", 6,35);
+													    	// T2_letters
+													    	context.fillText("G", 30+130,16);
+													    	context.fillText("H", 54+130,16);
+													    	context.fillText("A", 75+130,35);
+													    	context.fillText("B", 75+130,65);
+													    	context.fillText("C", 55+130,85);
+													    	context.fillText("D", 26+130,85);
+													    	context.fillText("E", 6+130,65);
+													    	context.fillText("F", 6+130,35);
+													    	// T3_letters
+													    	context.fillText("G", 30+260,16);
+													    	context.fillText("F", 54+260,16);
+													    	context.fillText("H", 75+260,35);
+													    	context.fillText("A", 75+260,65);
+													    	context.fillText("B", 55+260,85);
+													    	context.fillText("C", 26+260,85);
+													    	context.fillText("D", 6+260,65);
+													    	context.fillText("E", 6+260,35);
+													    </script>
+													</div>
+												</li>
+											</ol>
 										</td>
 									</tr>
-									</table>
-									<table style="vertical-align:top; padding:20 0 0 8">
-								      	<tr>
-								        	<td style="vertical-align:top; padding:0 0 0 0">20.</td>
-								        	<td style="vertical-align:top; padding:0 0 0 10">
-								        		Prove that if
-								            	<p>
-								            		$
-								            		\displaystyle
-								            			\vert x-x_0 \rvert < \frac{\varepsilon}{2} \ \ \ \ \text{and} \ \ \ \ \lvert y-y_0 \rvert < \frac{\varepsilon}{2}
-								            		$
-								            	</p>
-								            	then 
-								            	$$
-								            	\lvert (x+y) - (x_0+y_0) \rvert < \varepsilon, \\ 
-								            	\lvert (x-y) - (x_0-y_0) \rvert < \varepsilon.
-								            	$$
-								        	</td>
-								      	</tr>
-								    </table>
-								    <table style="vertical-align:top; padding:20 0 0 0">
-								      	<tr>
-								        	<td style="vertical-align:top; padding:0 0 0 0">
-								        		<label title="text" style="color:#aaa">*</label>21.
-								        	</td>
-								        	<td style="padding:0 0 0 10">
-									        	Prove that if
-									            $$
-									            \lvert x-x_0 \rvert < \text{min} \bigg(\frac{\varepsilon}{2(\lvert y_0 \rvert +1)} \ , 1 \bigg) \ \ \ \ \text{and} \ \ \ \ \lvert y-y_0 \rvert < \frac{\varepsilon}{2(\lvert x_0 \rvert +1)} \ ,
-									            $$
-									            then $\lvert xy-x_0y_0 \rvert < \varepsilon.$
-									            <br>
-									            (The notation "min" was defined in Problem 13, but the formula provided by that problem is irrelevent at the moment; the first inequality in the hypothesis just means that
-									            $$
-									            \vert x-x_0 \rvert < \frac{\varepsilon}{2(\lvert y_0 \rvert+1)} \ \ \ \ \text{and} \ \ \ \ \lvert x-x_0 \rvert < 1;
-									            $$
-									            at one point in the argunment you will need the first inequality, and at another point you will need the second. One more word of advice: since the hypotheses only provide information about $x-x_0$ and $y-y_0,$ it is almost a foregone conclusion that the proof will depend upon writing $xy-x_0y_0$ in a way that involves $y-y_0.$)
-								       		</td>
-								      	</tr>
-								    </table>
-								    <table style="vertical-align:top; padding: 20 0 0 0">
-								      	<tr>
-								        	<td style="vertical-align:top; padding:0 0 0 0">
-								        		<label title="text" style="color:#aaa">*</label>22.
-								        	</td>
-									        <td style="padding:0 0 0 10">
-									        	Prove that if $y_0 \neq 0$
-									            $$
-									            \lvert y-y_0 \rvert < \text{min} \bigg( \frac{\lvert y_0 \rvert}{2} \ , \frac{\varepsilon \lvert y_0 \rvert ^2}{2} \ \bigg),
-									            $$
-									            then $y \neq 0$ and
-												$$
-												{\huge\lvert} \ \frac{1}{y} - \frac{1}{y_0} {\huge\rvert} < \varepsilon.
-												$$
-									        </td>
-								      	</tr>
-								    </table>
-								    <table style="vertical-align:top; padding: 20 0 15 0">
-								      	<tr>
-								        	<td style="vertical-align:top; padding:0 0 0 0">
-								        		<label title="text" style="color:#aaa">*</label>23.
-								        	</td>
-									        <td style="padding:0 0 0 10">
-									        	Replace the question marks in the following statement by expressions involvi&ndash;<br>ng $\varepsilon, \ x_0$ and $y_0$ so that the conclusion will be true:
-									        	<br>
-									        	If $y_0 \neq 0$ and 
-									        	$$
-									        	\lvert y-y_0 \rvert < \ ? \ \ \ \ \text{and} \ \ \ \ \lvert x-x_0 \rvert < \ ?
-									        	$$
-									        	then $y \neq 0$ and
-									        	$$
-									        	{\huge\lvert} \frac{x}{y} \ - \frac{x_0}{y_0} \ {\huge\rvert} < \varepsilon.
-									        	$$
-									        	This problem is trivial in the sense that its solution follows from Problem 21 and 22 with almost no work at all (notice that $x/y=x \cdot 1/y.$) The crucial point is not to become confused; decide which of the two problems should be used first, and don't panic if your answer looks unlikely. 
-									        </td>
-								      	</tr>
-								    </table>
-								</div>
-							</td>
-							<td style="vertical-align:top;
-									width:50%; height:100%;
-									padding:0 0 0 25;
-									border-top:20 solid #f2f2f2;
-									border-left:1 solid #f2f2f2">
-							<div class="infscrll">
-									<table style="padding:0 20 0 0">
-										<tr>
-											<td style="vertical-align:top; padding:0 0 0 00">36.</td>
-											<td style="vertical-align:top; padding:0 0 0 10">Hello, Grimaldi!</td>
-										</tr>
-									</table>
-								</div>
-							</td>
-						</tr>
-					</table>
-					<table class="mySlides" style="margin:30 0 0 0; padding:0 0 0 0; width:100%; height:100%; border-collapse: collapse">
-					<tr>
-						<td style="vertical-align:top; width:50%; height:100%">
-							<table style="padding:10 0 10 45; color:lightgrey; font-family:'Avenir', 'light'; font-size:18; width:100%">
-								<tr>
-									<td>Fundamental Principles of Counting</td>
-									<td style="padding:0 0 0 150">
-										<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
-											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="text" placeholder="&lambda; ..." class="search"
-													style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
-										</form>
-									</td>
-								</tr>
-							</table>
+								</table>
+								<table style="padding:0 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">37.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											Sixteen people are to be seated at two circular tables, one of which seats ten, while the other seats six. How many different seating arrangements are possible?
+										</td>
+									</tr>
+								</table>
+								<table style="padding:20 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">38.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											A committee of fifteen &mdash; nine women and six men &mdash; is to be seated at a circular table (with fifteen seats). In how many ways can the seats be assigned so that no two men are seated next to each other.
+										</td>
+									</tr>
+								</table>
+								<table style="padding:20 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">39.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											Write a computer program, (or develop an algorithm) to determine whether there is a three&ndash;digit integer $abc (=100a+10b+c)$ where $abc=a!+b!+c!.$
+										</td>
+									</tr>
+								</table>
+								<p style="color:lightgrey; 
+											font-size:18; 
+											padding:20 0 0 0;
+											font-family:'Avenir','light';
+											border-bottom:1 solid #f2f2f2">
+									Combinations: The Binomial Theorem
+								</p>
+								<table style="padding:20 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:10 0 0 00">1.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											$\text{Calculate} \ \displaystyle{6 \choose 2} \ \text{and check your answer by listing all the selections of size 2 that}$
+											<br>
+											can be made from the letters <code>a,b,c,d,e,f.</code>
+										</td>
+									</tr>
+								</table>
+								<table style="padding:20 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">2.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											Facing a four&ndash;hour bus trip back to college, Diane decides to take along five magazines from the twelve that her sister Ann Marie has recently acquired. In how many ways can Diane make her selection?
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+						<td style="vertical-align:top;
+								width:50%; height:100%;
+								padding:0 0 0 25;
+								border-top:20 solid #f2f2f2;
+								border-left:1 solid #f2f2f2">
+						<div class="infscrll">
+								<table style="padding:0 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00">36.</td>
+										<td style="vertical-align:top; padding:0 0 0 10">Hello, Grimaldi!</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table class="mySlides" style="margin:30 0 0 0; padding:0 0 0 0; width:100%; height:100%; border-collapse: collapse">
+				<tr>
+					<td style="vertical-align:top; width:50%; height:100%">
+						<table style="padding:10 0 10 45; color:lightgrey; font-family:'Avenir', 'light'; font-size:18; width:100%">
+							<tr>
+								<td>Fundamental Principles of Counting</td>
+								<td style="padding:0 0 0 150">
+									<form action="index.html" style="padding:0 0 0 0; margin:0 0 0 0">
+										<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
+										<input type="text" placeholder="&lambda; ..." class="search"
+												style="color:#aaa; font-size:12; padding:0 0 0 5; font-family:'Avenir'">
+									</form>
+								</td>
+							</tr>
+						</table>
 							<div class="c1p1">
 								<table style="padding:10 20 0 0">
 									<tr>
