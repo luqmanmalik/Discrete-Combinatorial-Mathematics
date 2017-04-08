@@ -276,7 +276,7 @@
 		}
 
 		.subtitle{
-			color: lightgrey;
+			color: #aaa;
 			font-size: 15;
 			font-family:'Avenir', 'light';
 		}
@@ -1485,11 +1485,19 @@
 										</td>
 									</tr>
 								</table>
-								<table style="padding:15 20 0 0">
+								<table style="padding:15 20 10 0">
 									<tr>
 										<td style="vertical-align:top; padding: 0 0 0 00">23.</td>
 										<td style="vertical-align:top; padding: 0 0 0 10">
-											We are looking for the number of ways to arrange twelve objects &mdash; 4 of the first type, three of the second, two of the third, and three of the fourth. There are $12!/(4!3!2!3!)=277,200$ possible ways. $\square$
+											We are looking for the number of ways to arrange twelve objects &mdash; 4 of the first type, 3 of the second, 2 of the third, and 3 of the fourth. There are $12!/(4!3!2!3!)=277,200$ possible ways. $\square$
+											<p>
+												<span style="color:grey">+</span> An interesting layer of complexity &ndash;worth introducing&ndash; would be to require an ordering of type, e.g., 
+												<p style="margin:-5px 0 0 0">
+													<code class="code_block">
+														[T<sub>1</sub>: R<sub>(3,4)</sub>, R<sub>2</sub>, R<sub>1</sub>]; [T<sub>3</sub>: ... ]; [T<sub>4</sub>: ... ]; [T<sub>2</sub>: ... ]
+													</code>
+												</p>
+											</p>
 										</td>
 									</tr>
 								</table>
@@ -2439,16 +2447,24 @@
 									</tr>
 								</table>
 								<br>
-								<p class="subtitle" style="border-bottom:1 solid #f2f2f2">
-									1.3 Combinations: The Binomial Theorem
-								</p>
+								<p class="subtitle" style="border-bottom:1 solid #f2f2f2">1.3 Combinations: The Binomial Theorem</p>
 								<table style="padding:0 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00; color:#aaa; font-size:14; font-family:'Avenir','light'">Theorem&nbsp;1.2</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											For positive integers $n,t,$ the coefficient of $x_1^{n_1}x_2^{n_2}x_3^{n_3} \cdots x_t^{n_t}$ in the expansion of $(x_1+x_2+x_3+\cdots+x_t)^n$ is
+											$$\frac{n!}{n_1!n_2!n_3! \cdots n_t!},$$
+											where each $n_i$ is an integer with $0 \leq n_i \leq n,$ for all $1 \leq i \leq t,$ and $n_1+n_2+n_3+\cdots+n_t=n.$ &mdash; <em>multinomial theorem</em>
+										</td>
+									</tr>
+								</table>
+								<table style="padding:20 20 0 0">
 									<tr>
 										<td style="vertical-align:top; padding:10 0 0 00">1.</td>
 										<td style="vertical-align:top; padding:0 0 0 10">
-											$\text{Calculate} \ \displaystyle{06 \choose 02} \ \text{and check your answer by listing all the selections of size 2}$
+											$\text{Calculate} \ \displaystyle{6 \choose 2} \ \text{and check your answer by listing all the selections of size 2}$
 											<br>
-											that can be made from the letters <code>a,b,c,d,e,f.</code>
+											that can be made from the items $x_1,x_2,x_3,x_4,x_5,x_6.$
 										</td>
 									</tr>
 								</table>
@@ -2530,12 +2546,12 @@
 											  		context.fillText("J", 95,45);
 											    
 											  		// T2_letters
-											  		context.fillText("A", 285,35);
-											  		context.fillText("B", 305,35);
-											  		context.fillText("D", 345,80);
-											  		context.fillText("F", 305,130);
-											  		context.fillText("G", 285,130);
-											  		context.fillText("I", 245,80);
+											  		context.fillText("K", 285,35);
+											  		context.fillText("L", 305,35);
+											  		context.fillText("M", 345,80);
+											  		context.fillText("N", 305,130);
+											  		context.fillText("O", 285,130);
+											  		context.fillText("P", 245,80);
 												</script>
 											</div> 
 											$\text{We can select the ten people to be seated in T}_1=\displaystyle{16 \choose 10}$ </p>
@@ -2594,7 +2610,7 @@
 										</td>
 									</tr>
 								</table>
-								<table style="padding:20 20 10 0">
+								<table style="padding:20 20 0 0">
 									<tr>
 										<td style="vertical-align:top; padding:0 0 0 00">39.</td>
 										<td style="vertical-align:top; padding:0 0 0 10">
@@ -2673,14 +2689,14 @@
 															<p style="margin:0 0 0 30">
 													   			<span style="color:#A383F1">int</span> m = <span style="color:#83B2F1">9</span>;
 													   			<br>
-													   			<span style="color:#A383F1">int</span> i, j, k, &sigma;;
+													   			<span style="color:#A383F1">int</span> i, j, k, &Sigma;;
 													   			<p style="margin:10 0 0 30"><b>for</b> (<span style="color:#A383F1">int</span> i = <span style="color:#83B2F1">1</span>; i <= m; ++i) {</p>
 													   			<p style="margin:00 0 0 50"><b>for</b> (<span style="color:#A383F1">int</span> j = <span style="color:#83B2F1">0</span>; j <= m; ++j) {</p>
 													   			<p style="margin:00 0 0 70"><b>for</b> (<span style="color:#A383F1">int</span> k = <span style="color:#83B2F1">0</span>; k <= m; ++k) {</p>
 													   			<p style="margin:00 0 0 104; color:#566573">// call factorial(a).</p>
-													   			<p style="margin:00 0 0 104">&sigma; = <b>factorial</b>(i) + <b>factorial</b>(j) + <b>factorial</b>(k);</p>
-													   			<p style="margin:00 0 0 104"><b>if</b> (&sigma; == <span style="color:#83B2F1">100</span>*i + <span style="color:#83B2F1">10</span>*j + k) {</p>
-													   			<p style="margin:00 0 0 129">cout << &sigma; << endl;</p>
+													   			<p style="margin:00 0 0 104">&Sigma; = <b>factorial</b>(i) + <b>factorial</b>(j) + <b>factorial</b>(k);</p>
+													   			<p style="margin:00 0 0 104"><b>if</b> (&Sigma; == <span style="color:#83B2F1">100</span>*i + <span style="color:#83B2F1">10</span>*j + k) {</p>
+													   			<p style="margin:00 0 0 129">cout << &Sigma; << endl;</p>
 													   			<p style="margin:00 0 0 90">}</p>
 													   			<p style="margin:00 0 0 70">}</p>
 													   			<p style="margin:00 0 0 50">}</p>
@@ -2692,8 +2708,82 @@
 													</p>   
 				        						</p>
 				        					</code>
-				        					Sublime has a number of different color schemes available in the preference directory &mdash; the one above is my own. The script will return:
-				        					<code>145</code>
+				        					Sublime has a number of different color schemes available in the preference directory &mdash; the one above is my own. Moreover, <code>terminal</code> will compile the program with most (if not all) rendered <code>UTF&ndash;8</code> characters and <code>HTML</code> entities (in particular, <code>&lambda;</code> and <code>&Sigma;</code> produce no errors in the shell at runtime). The above script will return:
+				        					<code>145</code> $\square$
+										</td>
+									</tr>
+								</table>
+								<p class="subtitle" style="border-bottom:1 solid #f2f2f2; margin:20 20 0 0">1.3 Combinations: The Binomial Theorem</p>
+								<table style="padding:15 20 0 0">
+									<tr>
+										<td style="vertical-align:top; padding:0 0 0 00; color:#aaa; font-size:14; font-family:'Avenir','light'">Proof:</td>
+										<td style="vertical-align:top; padding:0 0 0 10">
+											As in the proof of the binomial theorem, the coefficient of $x_1^{n_1}x_2^{n_2}x_3^{n_3} \cdots x_t^{n_t}$ is the number of ways we can select $x_1$ from the $n_1$ of the $n$ factors, $x_2$ from $n_2$ of the $n-n_1$ remaining factors, $x_3$ from $n_3$ of the $n-n_1-n_2$ now remaining factors, ... , and $x_t$ from $n_t$ of the last $n-n_1-n_2-n_3-\cdots-n_{t-1}=n_t$ remaining factors. This can be carried out as in part (a) of Example 1.22, in
+											$$
+											{n \choose n_1}{n-n_1 \choose n_2}{n-n_1-n_2 \choose n_3} \cdots {n-n_1-n_2-n_3- \cdots -n_{t-1} \choose n_t}
+											$$
+											$$
+											\begin{equation}
+												\begin{split}
+													\displaystyle
+														&= \bigg[\frac{n!}{n_1!\color{grey}{\cancel{(n-n_1)!}}}\bigg]\bigg[\frac{\color{grey}{\cancel{(n-n_1)!}}}{n_2!\color{grey}{\cancel{(n-n_1-n_2)!}}}\bigg]\bigg[\frac{\color{grey}{\cancel{(n-n_1-n_2)!}}}{n_3!\color{grey}{\cancel{(n-n_1-n_2-n_3)!}}}\bigg] \\ \\
+														&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \cdots\bigg[\frac{\color{grey}{\cancel{(n-n_1-n_2-n_3- \cdots -n_{t-1})!}}}{n_t!(n-n_1-n_2-n_3- \cdots -n_{t-1}-n_t)!}\bigg] \\
+														&= \frac{n!}{n_1!n_2!n_3! \cdots (n_t!)(0!)} \ \succ \ n_1+n_2+n_3+\cdots+n_{t}=n \\
+														&= \frac{n!}{n_1!n_2!n_3! \cdots n_t!} = {n \choose n_1,n_2,n_3, \dots, n_t} \ \color{#aaa}{\text{:: multinomial coefficient}}
+												\end{split}
+											\end{equation}
+											$$
+											(When $t=2$ this reduces to a binomial coefficient.) $\square$
+										</td>
+									</tr>
+								</table>
+								<table style="padding:20 20 10 0; width:95%">
+									<tr>
+										<td style="vertical-align:top; padding:10 0 0 0">1.</td>
+										<td style="vertical-align:top; padding:0 0 0 0">
+											<table style="width:100%">
+												<tr>
+													<td style="vertical-align:top; padding:0 0 0 0; border-right:1 solid lightgrey">
+														$
+														\begin{equation}
+															\begin{split}
+																\displaystyle
+																	{6 \choose 2}
+																	&= \frac{6!}{2!(6-2)!} = \frac{6!}{2!4!} \\
+																	&= \frac{30}{2} \\
+																	&= 15. \\
+																	&\ \square
+															\end{split}
+														\end{equation}
+														$
+													</td>
+													<td style="vertical-align:center; padding:0 0 0 25">
+														<table style="height:100px">
+															<tr>
+																<td style="vertical-align:top; padding:0 0 0 00">$\langle x_1x_2 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_1x_3 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_1x_4 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_1x_5 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_1x_6 \rangle$</td>
+															</tr>
+															<tr>
+																<td style="vertical-align:top; padding:0 0 0 00">$\langle x_2x_3 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_2x_4 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_2x_5 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_2x_6 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_3x_4 \rangle$</td>
+															</tr>
+															<tr>
+																<td style="vertical-align:top; padding:0 0 0 00">$\langle x_3x_5 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_3x_6 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_4x_5 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_4x_6 \rangle$</td>
+																<td style="vertical-align:top; padding:0 0 0 10">$\langle x_5x_6 \rangle$</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
 										</td>
 									</tr>
 								</table>
