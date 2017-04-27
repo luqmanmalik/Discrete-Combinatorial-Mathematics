@@ -1,7 +1,6 @@
-## Discrete and Combinatorial Mathematics
-### An Applied Introduction
-#### Fifth Edition P_Sets &#9634; Ralph P. Grimaldi
-##### Solutions by Luqman Malik
+## Discrete and Combinatorial Mathematics: An Applied Introduction
+### Fifth Edition P_Sets &#9634; Ralph P. Grimaldi
+#### Solutions by Luqman Malik
 
 These are my solutions to the text. That is to say, what is written here I have written myself.
 
