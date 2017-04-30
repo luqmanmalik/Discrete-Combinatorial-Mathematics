@@ -6,4 +6,4 @@ A decent stack of work in combinatorics is indesensible to the contemporary trac
 
 __Required tech()__ This repository is Safari–centric and designed on a 13" MacBook running OS X El Capitan. Given the simplex design of the page–frame (HTML_CSS, MathJax) versus the complex embedding of the carousel<sup>4</sup> main–frame (JS, PHP, c++), a browser–universal repository seems exessive and idyllic at this stage.
 
-**Copyrighting** dynamic arrangements of digitized mathematical content seems intuitively paradoxical and superfluous, but – in fact, the inverse can immediately be shown to be true. By embedding the appropriate [license file](https://choosealicense.com "OSL") in each clone and_or fork of each version of the source, a well–defined attribution ecology is formed within the repository's geneological record. Furthermore, by compiling the metadata of each version>clone>fork, one can analize the structural distance of that copy from the source. Therefore, [repo + metadata(repo) + License]::**authenticate**::autr(s_code).
+This library is licensed for use under the terms in the file <code>MIT_License</code>.
