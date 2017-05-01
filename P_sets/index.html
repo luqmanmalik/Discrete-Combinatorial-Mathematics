@@ -78,7 +78,7 @@
 		    height: 96% !important;
 		    overflow:scroll !important;
 		    font-size:15; 
-		    padding:20 0 0 20;
+		    padding-top:20
 		}
 		.infscrll_C2P1 {
 		    height: 660 !important;
@@ -142,8 +142,6 @@
 		
 		a.textnav{color: white; font-size: 18; font-weight: 500;}
 		a.textnav:hover{text-decoration: underline; cursor:default;}
-		a.textnav_f2{color: #aaa; font-size: 15; font-weight: 500;}
-		a.textnav_f2:hover{text-decoration: underline; cursor:default;}
 		/*a:active{color: grey !important}*/
 		a.two{color:lightgrey; text-decoration: none}
 		a.two:hover{color: grey}
@@ -158,28 +156,16 @@
 		input[type="search"]{
 			color:#aaa;
 			font-size: 13;
-			text-align: right;
+			text-align: left;
 			font-family:'Avenir';
-			-webkit-appearance:caret;
-			border-radius: 0%!important;
-		}
-		.search_tp{
-			color:#aaa;
-			width:100%;
-			font-size: 13;
-			padding:0 2 0 0;
-			text-align: right;
-			font-family:'Avenir';
-			background: transparent;
 			-webkit-appearance:caret;
 			border-radius: 0%!important;
 		}
 		.search{
 			color:#aaa;
-			width:85%;
 			font-size: 13;
-			padding:0 2 0 0;
-			text-align: right;
+			padding:0 1 0 5;
+			text-align: left;
 			font-family:'Avenir';
 			background: transparent;
 			-webkit-appearance:caret;
@@ -280,6 +266,8 @@
 		    margin:0 20 0 0;
 		}
 
+		.search{border:1 solid #f2f2f2;}
+
 		.drop_table{
 			font-size:16; 
 			font-weight: 500; 
@@ -329,7 +317,7 @@
 										cursor:default">
 								Discrete and Combinatorial Mathematics
 								<br>
-								<span style="font-size:16px">An Applied Introduction / 5E_PS</span>
+								<span style="font-size:16px">An Applied Introduction. 5E&ndash;PS</span>
 								<br>
 								&#9634; <span style="font-size:12px">RALPH P. GRIMALDI</span>
 							</p>
@@ -349,9 +337,9 @@
 									padding:0 0 0 0;">
 							<div style="width:100%; background:#f2f2f2" align="right">
 								<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-								<input type="search" class="search_tp" autosave="5" id="clc_fe" onsearch="search_func()" 
-										placeholder="Search discom_5E / PS">
-								<p id="search_res" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light'; color:grey"></p>
+								<input type="search" class="search" autosave="5" id="clc_fe" onsearch="search_func()" 
+										placeholder="Search Discrete and Co...">
+								<p id="search_res" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light'; color:grey"></p>
 								<script>
 								function search_func() {
 								   var x = document.getElementById("clc_fe");
@@ -674,14 +662,14 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td style="vertical-align:top; padding:11 0 0 1">Fundamental Principles of Counting</td>
-									<td style="padding:12 0 0 80">
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
+									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="5" id="clc_fe1" onsearch="search_func1()" 
-													placeholder="Search discom_5E / PS">
+											<input type="search" autosave="5" id="clc_fe1" onsearch="search_func1()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res1" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res1" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func1() {
 											   var x = document.getElementById("clc_fe1");
@@ -773,18 +761,9 @@
 						</td>
 						<td style="vertical-align:top;
 									width:50%; height:100%;
-									padding:0 0 0 0;
+									padding:0 0 0 20;
+									border-top:20 solid #f2f2f2;
 									border-left:1 solid #f2f2f2">
-							<div style="width:100%; height:20; margin:0 0 0 0; padding:0 0 2 0; background:#f2f2f2">
-								<div style="float:right; margin:0 10 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
-							  	<div style="float:right; margin:0 15 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
-							</div>
 							<div class="infscrll">
 								<table style="padding:0 20 0 0">
 									<tr>
@@ -899,17 +878,17 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td style="vertical-align:top; padding:11 0 0 1">Fundamental Principles of Counting</td>
-									<td style="padding:12 0 0 80">
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
+									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="5" id="clc_fe2" onsearch="search_func2()" 
-													placeholder="Search discom_5E / PS">
+											<input type="search" autosave="10" id="clc_fe_s2" onsearch="search_func2()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res2" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res2" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func2() {
-											   var x = document.getElementById("clc_fe2");
+											   var x = document.getElementById("clc_fe_s2");
 											   document.getElementById("search_res2").innerHTML = "<br>" + x.value;
 											}
 											</script>
@@ -989,18 +968,9 @@
 						</td>
 						<td style="vertical-align:top;
 									width:50%; height:100%;
-									padding:0 0 0 0;
+									padding:0 0 0 20;
+									border-top:20 solid #f2f2f2;
 									border-left:1 solid #f2f2f2">
-							<div style="width:100%; height:20; margin:0 0 0 0; padding:0 0 2 0; background:#f2f2f2">
-								<div style="float:right; margin:0 10 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
-							  	<div style="float:right; margin:0 15 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
-							</div>
 							<div class="infscrll">
 								<table style="padding: 0 20 0 0">
 									<tr>
@@ -1110,10 +1080,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s3" onsearch="search_func3()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s3" onsearch="search_func3()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res3" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res3" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func3() {
 											   var x = document.getElementById("clc_fe_s3");
@@ -1282,10 +1252,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s4" onsearch="search_func4()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s4" onsearch="search_func4()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res4" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res4" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func4() {
 											   var x = document.getElementById("clc_fe_s4");
@@ -1429,10 +1399,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s5" onsearch="search_func5()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s5" onsearch="search_func5()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res5" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res5" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func5() {
 											   var x = document.getElementById("clc_fe_s5");
@@ -1600,10 +1570,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s6" onsearch="search_func6()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s6" onsearch="search_func6()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res6" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res6" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func6() {
 											   var x = document.getElementById("clc_fe_s6");
@@ -2086,10 +2056,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s7" onsearch="search_func7()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s7" onsearch="search_func7()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res7" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res7" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func7() {
 											   var x = document.getElementById("clc_fe_s7");
@@ -2518,10 +2488,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s8" onsearch="search_func8()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s8" onsearch="search_func8()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res8" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res8" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func8() {
 											   var x = document.getElementById("clc_fe_s8");
@@ -2959,10 +2929,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s9" onsearch="search_func9()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s9" onsearch="search_func9()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res9" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res9" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func9() {
 											   var x = document.getElementById("clc_fe_s9");
@@ -3302,10 +3272,10 @@
 									<td style="padding:2 0 0 80">
 										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" class="search" autosave="10" id="clc_fe_s10" onsearch="search_func10()" 
-													placeholder="Search discom_5E / P">
+											<input type="search" autosave="10" id="clc_fe_s10" onsearch="search_func10()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res10" style="margin:0 6 0 0; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res10" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
 											function search_func10() {
 											   var x = document.getElementById("clc_fe_s10");
@@ -3460,15 +3430,16 @@
 										</a>
 									</div>
 									<div  id="myDropdown" class="dropdown-content">
-									  	<div style="padding:17 0 10 0">
+									  	<div style="padding:17 0 0 0">
 											<a class="pset_title" onclick="currentDiv(1)">
-												Discrete and Combinatorial Mathematics / 5E_PS
+												Discrete and Combinatorial Mathematics / 5E&ndash;PS
 											</a>
 										  	<div style="float:right">
 										  		<a class="textnav">&#9508;</a>
 										  		<a class="textnav">&#9500;</a>
 										  	</div>
 									  	</div>
+									  	<br>
 									  	<hr class="style-two">
 									  	<div class="infscrll_dc">
 									  		<p class="drop_table">Fundamentals of Discrete Mathematics</p>
