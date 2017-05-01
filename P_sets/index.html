@@ -156,17 +156,18 @@
 		input[type="search"]{
 			color:#aaa;
 			font-size: 13;
-			text-align: center;
+			text-align: left;
 			font-family:'Avenir';
 			-webkit-appearance:caret;
 			border-radius: 0%!important;
 		}
 		.search{
 			color:#aaa;
-			background: transparent;
 			font-size: 13;
-			text-align: center;
+			padding:0 1 0 5;
+			text-align: left;
 			font-family:'Avenir';
+			background: transparent;
 			-webkit-appearance:caret;
 			border-radius: 0%!important;
 		}
@@ -279,7 +280,12 @@
 			font-size: 15;
 			font-family:'Avenir', 'light';
 		}
-
+		.unselectable{
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
 		</style>
 	</head>
 
@@ -323,20 +329,21 @@
 								&lambda; &#9777; &#9778; &#9779; &#9780; &#9781; &#9782; &#9783; &#9777; &#9778; &#9779; &#9780; &#9781; &#9782; &#9783; &#9777;::...
 							</p>
 							<p style="color:#f2f2f2; font-size:14; padding:50 0 0 40; font-family:'Avenir'; font-weight:500">SOLUTIONS by Luqman Malik</p>
-							<p style="color:#aaa; font-size:13; padding:20 0 0 40; font-family:'Avenir'; font-weight:500">&copy; 2017</p>
+							<p style="color:#aaa; font-size:13; padding:20 0 0 40; font-family:'Avenir'; font-weight:500">MIT License</p>
 						</td>
 						<td style="vertical-align:top;
 									width:50%; height: 100%;
 									cursor:default;
 									padding:0 0 0 0;">
-							<div style="width:100%; background:#f2f2f2">
+							<div style="width:100%; background:#f2f2f2" align="right">
 								<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-								<input type="search" class="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()">
-								<p id="search_res" style="margin:0 0 0 10; font-size:14; font-family:'Avenir', 'light'; color:grey"></p>
+								<input type="search" class="search" autosave="5" id="clc_fe" onsearch="search_func()" 
+										placeholder="Search Discrete and Co...">
+								<p id="search_res" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light'; color:grey"></p>
 								<script>
 								function search_func() {
-								   var x = document.getElementById("clc_fe_s1");
-								   document.getElementById("search_res").innerHTML = x+"\n";
+								   var x = document.getElementById("clc_fe");
+								   document.getElementById("search_res").innerHTML = '<br>' + x.value;
 								}
 								</script>
 							</div>
@@ -655,18 +662,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="5" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="5" id="clc_fe1" onsearch="search_func1()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res1" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func1() {
+											   var x = document.getElementById("clc_fe1");
+											   document.getElementById("search_res1").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -871,18 +878,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s2" onsearch="search_func2()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res2" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func2() {
+											   var x = document.getElementById("clc_fe_s2");
+											   document.getElementById("search_res2").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -1069,18 +1076,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s3" onsearch="search_func3()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res3" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func3() {
+											   var x = document.getElementById("clc_fe_s3");
+											   document.getElementById("search_res3").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -1241,18 +1248,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s4" onsearch="search_func4()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res4" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func4() {
+											   var x = document.getElementById("clc_fe_s4");
+											   document.getElementById("search_res4").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -1388,18 +1395,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s5" onsearch="search_func5()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res5" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func5() {
+											   var x = document.getElementById("clc_fe_s5");
+											   document.getElementById("search_res5").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -1559,18 +1566,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s6" onsearch="search_func6()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res6" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func6() {
+											   var x = document.getElementById("clc_fe_s6");
+											   document.getElementById("search_res6").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -2045,18 +2052,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s7" onsearch="search_func7()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res7" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func7() {
+											   var x = document.getElementById("clc_fe_s7");
+											   document.getElementById("search_res7").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -2477,18 +2484,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s8" onsearch="search_func8()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res8" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func8() {
+											   var x = document.getElementById("clc_fe_s8");
+											   document.getElementById("search_res8").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -2918,18 +2925,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s9" onsearch="search_func9()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res9" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func9() {
+											   var x = document.getElementById("clc_fe_s9");
+											   document.getElementById("search_res9").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
@@ -3261,18 +3268,18 @@
 						<td style="vertical-align:top; width:50%; height:100%">
 							<table style="padding:10 0 10 20; color:#aaa; font-family:'Avenir', 'light'; font-size:18; width:100%">
 								<tr>
-									<td>Fundamental Principles of Counting</td>
+									<td style="vertical-align:top">Fundamental Principles of Counting</td>
 									<td style="padding:2 0 0 80">
-										<div style="padding:0 0 0 0; margin:0 0 0 0">
+										<div style="padding:0 0 0 0; margin:0 0 0 0" align="right">
 											<input type="submit" style="position: fixed; left: -10000000px;" disabled/>
-											<input type="search" results="5" autosave="10" name="s" id="clc_fe_s1" onsearch="search_func()" 
-													placeholder="Search repository...">
+											<input type="search" autosave="10" id="clc_fe_s10" onsearch="search_func10()" 
+													placeholder="Search Discrete and Co...">
 											<div style="border-bottom:1 solid #f2f2f2"></div>
-											<p id="search_res" style="margin:0 0 0 5; font-size:14; font-family:'Avenir', 'light"></p>
+											<p id="search_res10" style="margin:0 9 0 0; font-size:14; font-family:'Avenir', 'light"></p>
 											<script>
-											function search_func() {
-											   var x = document.getElementById("clc_fe_s1");
-											   document.getElementById("search_res").innerHTML = "<br>" + x.value;
+											function search_func10() {
+											   var x = document.getElementById("clc_fe_s10");
+											   document.getElementById("search_res10").innerHTML = "<br>" + x.value;
 											}
 											</script>
 										</div>
