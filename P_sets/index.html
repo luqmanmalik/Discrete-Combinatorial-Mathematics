@@ -61,7 +61,7 @@
 
 		.MathJax:focus, .mjx-chtml:focus, .MathJax_SVG:focus {
    			outline:none;
-   			border: 1 solid #D1DCE9;
+   			border: 1 solid #f2f2f2;
    			padding: 2 2;
 		}
 
@@ -205,7 +205,7 @@
 		    margin:0 0 0 -2;  
 			font-family:'Avenir', 'light'; 
 			font-size:18; 
-			cursor:default
+			cursor:default;
 		}
 
 		.dropdown:hover .dropdown-content {
@@ -297,6 +297,54 @@
 			-moz-user-select: none;
 			-webkit-user-select: none;
 			-ms-user-select: none;
+		}
+		ul.countries {
+		  text-align: left;
+		  display: inline;
+		  margin:0;
+		  padding:0;
+		  list-style: none;
+		}
+		ul.countries li {
+			color: #aaa;
+			font-size: 16;
+			font-family: Avenir, light;
+			display: inline-block;
+			margin:0;
+			position: relative;
+			padding: 0;
+			cursor: pointer;
+		}
+		ul.countries li:hover {
+		  background: transparent;
+		  color: #aaa;
+		  margin:0;
+		  cursor: default;
+		}
+		ul.countries li ul.countries {
+		  padding: 0;
+		  top: 0;
+		  left: 0;
+		  width: 20%;
+		  display: none;
+		  opacity: 0;
+		  visibility: hidden;
+		  -webkit-transiton: opacity 0.2s;
+		  -moz-transition: opacity 0.2s;
+		  -ms-transition: opacity 0.2s;
+		  -o-transition: opacity 0.2s;
+		  -transition: opacity 0.2s;
+		}
+		ul.countries li ul.countries li { 
+			padding: 0 0 0 10;
+		  	background: transparent;
+		  	display: inline; 
+		}
+		ul.countries li ul.countries li:hover { }
+		ul.countries li:hover ul.countries {
+		  display: inline;
+		  opacity: 1;
+		  visibility: visible;
 		}
 		</style>
 	</head>
@@ -776,14 +824,21 @@
 									padding:0 0 0 0;
 									border-left:1 solid #f2f2f2">
 							<div style="width:100%; height:20; margin:0 0 0 0; padding:0 0 2 0; background:#f2f2f2">
-								<div style="float:right; margin:0 10 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
-							  	<div style="float:right; margin:0 15 0 0">
-							  		<a class="textnav_f2">&#9508;</a>
-							  		<a class="textnav_f2">&#9500;</a>
-							  	</div>
+								<ul class="countries">
+								  <li>
+								    &#9656;
+								    <ul class="countries">
+								     	<li>
+								      		<a class="textnav_f2">&#9508;</a>
+							  				<a class="textnav_f2">&#9500;</a>
+							  			</li>
+								    	<li>
+								      		<a class="textnav_f2">&#9508;</a>
+							  				<a class="textnav_f2">&#9500;</a>
+								     	</li>
+								    </ul>
+								  </li>
+								</ul>
 							</div>
 							<div class="infscrll">
 								<table style="padding:0 20 0 0">
