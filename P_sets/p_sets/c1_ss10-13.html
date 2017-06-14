@@ -1,0 +1,80 @@
+<html>
+	<table style="padding: 0 0 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 00 0 00">10.</td>
+			<td style="vertical-align:top; padding:0 20 0 10">
+				Any subdivision of the fifteen books resulting in two nonempty shelves gives us $15!$ ways to arrange the books &mdash; for example
+				<div id="wall">
+					<div class="shelf">
+						&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+					</div>
+					<div class="shelf0">
+						&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+					</div>
+				</div>
+				<div id="wall">
+					<div class="shelf0">
+						&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+					</div>
+					<div class="shelf">
+						&#9616; &#9616; &#9616; &#9616; &#9616; &#9616; &#9616;
+					</div>
+				</div>
+				<br>
+				both yield $15!$ possible arragements. Since there are 14 such possible subdivisions, the total number of ways in which Pamela can arrange her books under the given condition is $(14)(15!). \ \square$
+			</td>
+		</tr>
+	</table>
+	<table style="padding: 20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">11.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						There are four roads connecting towns A and B, and three roads from B to C. So, by the rule of product, there are $4\cdot3=12$ roads from A to C passing through B. Since there are two direct roads from A to C, there are $12+2=14$ destinct ways in which Linda can travel to C from A. $\square$
+					</li>
+					<li>
+						For each of these fourteen paths, Linda may select again (from the same pool of paths) to complete a round trip. Hence, by the rule of product, we find there are $14\cdot14=196$ distinct round trips from A to C and back again. $\square$
+					</li>
+					<li>
+						In this case, Linda has 14 options to get from A to C. For her return trip, however, she has all but that combination available to her. So there are $14\cdot13=182$ possible round trips in this scenario. $\square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding: 20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:21 0 0 00">12.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ul style="list-style-type:none; padding:0 0 0 0">
+					<li>
+						$
+						\text{P}=
+						\begin{bmatrix}
+							\text{a} & \text{c} & \text{t} & & \text{c} & \text{a} & \text{t} \\
+							\text{a} & \text{t} & \text{c} & & \text{c} & \text{t} & \text{a} \\
+							\text{t} & \text{c} & \text{a} & & \text{t} & \text{a} & \text{c} \\
+						\end{bmatrix}
+						$
+					</li>
+				</u>
+			</td>
+		</tr>
+	</table>
+	<table style="padding: 20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">13.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						This is equivalent to asking: "In how many ways can we permute 8 objects selected from a set of 8 objects?," which is equal to  $P(8,8)=8!. \ \square$
+					</li>
+					<li>
+						In the former case, we simply fix $t$, and permute the remaining list $(7!)$ &mdash; in the latter, we fix $t \ \text{and} \ c,$ and permute the middle list $(6!). \ \square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+</html>

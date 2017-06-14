@@ -1,0 +1,152 @@
+<html>
+	<table style="padding:10 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">30.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				A sequence of letters of the form <code>abcba</code>, where the expression is unchanged upon revising order, is an example of a palindrome (of five letters).
+				<ol type="a" style="margin:5 0 0 0">
+					<li>If a letter may appear more than twice, how many palindromes of five letters are there? of six letters?</li>
+					<li>Repeat part (a) under the condition that no letter may appear twice.</li>
+				</ol>
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">31.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				Determine the number of six&ndash;digit integers (no leading zeros) in which
+				<ol type="a" style="margin:5 0 10 0">
+					<li>no digit may be reapeated;</li>
+					<li>digits may be repeated.</li>
+				</ol>
+				Answer parts (a) and (b) with the extra condition that the six&ndash;digit integer is
+				<ol type="i" style="margin:5 0 0 0">
+					<li>even;</li>
+					<li>divisible by five;</li>
+					<li>divisible by four.</li>
+				</ol>
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">32.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						Provide a combinatorial argument to show that if $n$ and $k$ are positive integers with $n=3k,$ then $n!/(3!)^k$ is an integer.
+					</li>
+					<li>
+						Generalize the result of part (a).
+					</li>
+				</ol>
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:5 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">33.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						In how many possible ways could a student answer a 10&ndash;question true&ndash;false test?
+					</li>
+					<li>
+						In how many ways can the student answer the test in part (a) if it is possible to leave a question unanswered in order to avoid an extra penalty for a wrong answer?
+					</li>
+				</ol>
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:5 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">34.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				How many distinct four&ndash;digit integers can one make from the digits 1,3,3,7,7, and 8?
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">35.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						In how many ways can seven people be arranged about a circular table?
+					</li>
+					<li>
+						If two of the people insist on sitting next to each other, how many arrangements are possible?
+					</li>
+				</ol>
+			</td>
+      	</tr>
+    </table>
+    <table style="padding:5 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">36.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						In how many ways can eight people, denoted $A,B,\dots,H$ be <u>seated</u> about the square table shown in the figure below?
+					</li>
+					<li>
+						If two of the eight people, say $A$ and $B$, do not get along well, how many different seatings are possible with $A$ and $B$ not sitting next to each other?
+						<div style="margin:5 0 7 0; text-align:center;">
+							<canvas id="myCanvas5" width="400" height="85"></canvas>
+						    <script>
+						    	var canvas = document.getElementById('myCanvas5');
+						    	var context = canvas.getContext('2d');
+						    	var centerX = canvas.width / 8;
+						    	var centerY = canvas.height / 1.7;
+						      
+						    	// Tables
+						    	for(i=0; i<3; i++){
+						      	context.beginPath();
+						      	context.rect(20+130*i,20,centerX,centerY);
+						      	context.fillStyle = '#f2f2f2';
+						      	context.fill();
+						    	}
+						      
+						   		// Equality signs
+						    	context.font = "13px SourceCodePro-Regular";
+						    	context.fillStyle = '#aaa';
+						    	context.fillText("=", 107, 50);
+						    	context.fillText("\u2260", 239, 50);
+
+						    	// T1_letters
+						    	context.fillText("A", 30,16);
+						    	context.fillText("B", 54,16);
+						    	context.fillText("C", 75,35);
+						    	context.fillText("D", 75,65);
+						    	context.fillText("E", 55,85);
+						    	context.fillText("F", 26,85);
+						    	context.fillText("G", 6,65);
+						    	context.fillText("H", 6,35);
+						    	// T2_letters
+						    	context.fillText("G", 30+130,16);
+						    	context.fillText("H", 54+130,16);
+						    	context.fillText("A", 75+130,35);
+						    	context.fillText("B", 75+130,65);
+						    	context.fillText("C", 55+130,85);
+						    	context.fillText("D", 26+130,85);
+						    	context.fillText("E", 6+130,65);
+						    	context.fillText("F", 6+130,35);
+						    	// T3_letters
+						    	context.fillText("F", 30+260,16);
+						    	context.fillText("G", 54+260,16);
+						    	context.fillText("H", 75+260,35);
+						    	context.fillText("A", 75+260,65);
+						    	context.fillText("B", 55+260,85);
+						    	context.fillText("C", 26+260,85);
+						    	context.fillText("D", 6+260,65);
+						    	context.fillText("E", 6+260,35);
+						    </script>
+						</div>
+						<b>Note</b>: this result reveals that the combinatorics of seating/placing people around the square table is congruent with placing them about the circular table.
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+</html>

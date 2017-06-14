@@ -1,0 +1,112 @@
+<html>
+	<table style="padding:0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">04.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				For part (a), we need to consider the boundary conditions. That is to say, a symbol requires at least one raised dot, and all raised dots constitute a valid symbol. Hence,
+				<p>
+					$
+					\begin{array}
+						\text{(a)} \ 2^6-1=63. \ \square & \ \ \text{(b)} \ \displaystyle{6 \choose 3}=20. \ \square & \ \ \text{(c)} \ \displaystyle{6 \choose 2}+\displaystyle{6 \choose 4}+\displaystyle{6 \choose 6}=31. \ \square
+					\end{array}
+					$
+				</p>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:30 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:9 0 0 00">05.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>One can produce $P(5,3)=\displaystyle\frac{5!}{(5-3)!}=\frac{5!}{2!}=5\cdot4\cdot3=60$ permutations. $\square$</li>
+					<li>
+						There are $\displaystyle{5 \choose 3}=\frac{5!}{3!(5-3)!}=\frac{5!}{3!2!}=10$ such combinations. $\square$ They are:
+						$$
+						\begin{array}{ll}
+							\{x_1,x_2,x_3\} & \{x_1,x_2,x_4\} & \{x_1,x_2,x_5\} & \{x_2,x_3,x_4\} & \{x_2,x_3,x_5\} \\
+							\{x_3,x_4,x_5\} & \{x_3,x_4,x_1\} & \{x_3,x_5,x_1\} & \{x_5,x_4,x_1\} & \{x_5,x_4,x_2\}
+						\end{array}
+						$$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">06.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				$\forall n > 1, \text{we have}$
+				$$
+				\begin{equation}
+					\begin{split}
+						{n \choose 2}+{n-1 \choose 2} 
+						&= \frac{n!}{2!(n-2)!}+\frac{(n-1)!}{2!(n-1-2)!} \\
+						&= \frac{n(n-1)!}{2}+\frac{(n-1)(n-2)}{2} \\
+						&= \bigg(\frac{1}{2}\bigg)(n)(n-1)+\bigg(\frac{1}{2}\bigg)(n-1)(n-2) \\
+						&= \bigg(\frac{1}{2}\bigg)(n-1)\big[n+(n-2)\big] \\
+						&= \bigg(\frac{1}{2}\bigg)(n-1)(2n-2) \\
+						&= \bigg(\frac{1}{2}\bigg)(2n^2-2n-2n+2) \\
+						&= \bigg(\frac{1}{\color{grey}{\cancel{2}}}\bigg)(\color{grey}{\cancel{2}})(n^2-2n+1) \\
+						&= n^2-2n+1 \\
+						&= (n-1)^2. \\
+						&\ \square
+					\end{split}
+				\end{equation}
+				$$
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:10 20 10 0">
+		<tr>
+			<td style="vertical-align:top; padding:13 0 0 00">07.</td>
+			<td style="vertical-align:top; padding:00 0 0 10">
+				<table>
+					<tr>
+						<td style="padding:0 0 0 00">(a) $\text{S}_1=\displaystyle{20 \choose 12}. \ \square$</td>
+						<td style="padding:0 0 0 25">(b) $\text{S}_2=\displaystyle{10 \choose 6}{10 \choose 6}. \ \square$</td>
+					</tr>
+				</table>
+				<p style="margin:10 0 0 0">
+					$
+					\begin{equation}
+						\begin{split}
+							\text{(c) S}_3
+							&= \displaystyle {10 \choose 2}{10 \choose 10}[\lambda_1:2]+{10 \choose 4}{10 \choose 8}[\lambda_1:4]+\cdots+{10 \choose 10}{10 \choose 2}[\lambda_1:10] \\
+							&= \sum_{i=1}^5 {10 \choose 2i}{10 \choose 12-2i}. \\
+							&\ \square
+						\end{split}
+					\end{equation}
+					$
+				</p>
+				<p style="margin:10 0 0 0">
+					$
+					\begin{equation}
+						\begin{split}
+							\text{(d) S}_4
+							&= \displaystyle {10 \choose 7}{10 \choose 5}[\lambda_1:7]+{10 \choose 8}{10 \choose 4}[\lambda_1:8]+{10 \choose 9}{10 \choose 3}[\lambda_1:9] \\
+							& \ \ \ \ \ \ \ \ \ \ +{10 \choose 10}{10 \choose 2}[\lambda_1:10] \\
+							&= \sum_{i=7}^{10} {10 \choose i}{10 \choose 12-i}. \\
+							&\ \square
+						\end{split}
+					\end{equation}
+					$
+				</p>
+				<p style="margin:10 0 0 0">
+					$
+					\begin{equation}
+						\begin{split}
+							\text{(e) S}_5
+							&= \displaystyle {10 \choose 8}{10 \choose 4}[\lambda:8]+{10 \choose 9}{10 \choose 3}[\lambda:9]+{10 \choose 10}{10 \choose 2}[\lambda:10] \\
+							&= \sum_{i=8}^{10} {10 \choose i}{10 \choose 12-i}. \\
+							&\ \square
+						\end{split}
+					\end{equation}
+					$
+				</p>
+			</td>
+		</tr>
+	</table>
+</html>

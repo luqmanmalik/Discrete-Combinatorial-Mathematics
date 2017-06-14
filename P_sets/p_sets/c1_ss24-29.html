@@ -1,0 +1,350 @@
+<html>
+	<p style="font-size:16; margin:2 20 0 0">
+		Problem 24 constitutes a first example of a combinatorial proof asked to be given by the reader. Combinatorial proofs involve counting.
+	</p>
+	<table style="padding:10 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:12 0 0 00">24.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				$
+				\begin{equation}
+					\begin{split}
+						\displaystyle
+							P(n+1,r) 
+							&= \frac{(n+1)!}{(n+1-r)!} \\
+							&= \bigg(\frac{n+1}{n+1-r}\bigg)\bigg(\frac{n!}{(n-1)!}\bigg) \\
+							&= \bigg(\frac{n+1}{n+1-r}\bigg)P(n,r). \\
+							& \ \square
+					\end{split}
+				\end{equation}
+				$
+			</td>
+		</tr>
+	</table>
+	 <table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:10 0 0 00">25.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<table style="padding:0 0 0 0">
+					<tr>
+						<td style="vertical-align:top; padding:8 0 0 00">a)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">
+							$
+							\begin{equation}
+								\begin{split}
+									\require{cancel}
+									\displaystyle
+										P(n,2) = 90 \ \ \Longleftrightarrow \ \ \frac{n!}{(n-2)!} &= 90 \\
+										n! &= 90(n-2)! \\
+										(n)(n-1)! &= 90(n-2)! \\
+										n &= \frac{90(n-2)!}{(n-1)!} \\
+										  &= \frac{90\color{grey}{\cancel{(n-2)!}}}{(n-1)\color{grey}{\cancel{(n-2)!}}} = \frac{90}{(n-1)} \\
+										 10 &= \frac{90}{(10-1)} = 10. \\
+											& \ \square
+								\end{split}
+							\end{equation}
+							$
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">b)</td>
+						<td style="vertical-align:top; padding:6 0 0 10">
+							$
+							\begin{equation}
+								\begin{split}
+									\require{cancel}
+									\displaystyle
+										P(n,3) &= 3P(n,2) \\
+										\frac{n!}{(n-3)!} &= 3\bigg(\frac{n!}{(n-2)!}\bigg) \\
+										\frac{n!}{(n-3)!} \bigg/ \bigg(\frac{n!}{(n-2)!}\bigg) &= 3 \\
+										\bigg(\frac{n!}{(n-3)!}\bigg) \bigg(\frac{(n-2)!}{n!}\bigg) &= \\
+										\bigg(\frac{\color{grey}{\cancel{n!}}}{\color{grey}{\cancel{(n-3)!}}}\bigg) \bigg(\frac{(n-2)\color{grey}{\cancel{(n-3)!}}}{\color{grey}{\cancel{n!}}}\bigg) &= \\
+										n-2 &= 3 \\
+										  n &= 5. \\
+										    & \ \square
+								\end{split}
+							\end{equation}
+							$
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">c)</td>
+						<td style="vertical-align:top; padding:6 0 10 10">
+							$
+							\begin{equation}
+								\begin{split}
+									\require{cancel}
+									\displaystyle
+										2P(n,2)+50 &= P(2n,2) \\
+										\frac{2n!}{(n-2)!}+50 &= \frac{(2n)!}{(2n-2)!} \\
+										\frac{2n(n-1)\color{grey}{\cancel{(n-2)!}}}{\color{grey}{\cancel{(n-2)!}}}+50 &= \frac{2n(2n-1)\color{grey}{\cancel{(2n-2)!}}}{\color{grey}{\cancel{(2n-2)!}}} \\
+										2n(n-1)+50 &= 2n(2n-1) \\
+										2[n(n-1)+25] &= 2n(2n-1) \\
+										n(n-1)+25 &= n(2n-1) \\
+										25 &= n(2n-1)-n(n-1) \\
+										25 &= n[(2n-1)-(n-1)] \\
+										25 &= n(2n-1-n+1) \\
+										n^2 &= 25 \\
+										  n &= 5. \\
+										    & \ \square
+								\end{split}
+							\end{equation}
+							$
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding: 0 0 0 00">26.</td>
+			<td style="vertical-align:top; padding: 0 0 0 10">
+				For $(0,0) \rightarrow (7,7),$ two such paths may look like the following:
+				<table style="vertical-align:top; padding:0 20 9 0">
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 0">
+							<canvas id="myCanvas" width="221" height="185"></canvas>
+						    <script>
+						        var canvas = document.getElementById('myCanvas');
+						        var context = canvas.getContext('2d');
+						        var i;     
+
+						        // grid
+						        for (i = 0; i < 8; i++) {
+						            var n = (i*21)+10;
+						            context.beginPath();
+						            context.moveTo(14, n);
+						            context.lineTo(219, n);
+						            context.lineWidth = .5;
+						            context.strokeStyle = 'lightgrey';
+						            context.stroke();
+						        }
+						        for (i = 0; i < 8; i++) {
+						            var n = (i*29)+15;
+						            context.beginPath();
+						            context.moveTo(n, 10);
+						            context.lineTo(n, 158);
+						            context.lineWidth = 1;
+						            context.strokeStyle = 'lightgrey';
+						            context.stroke();
+						        }
+
+						        // x-axis
+						        context.beginPath();
+						        context.moveTo(15, 158);
+						        context.lineTo(219, 158);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#7C7C7E';
+						        context.stroke();
+						        // x_labels
+						        context.font = "13px SourceCodePro-Regular";
+						        context.fillStyle = '#7C7C7E';
+						        context.fillText("1", 40, 176);
+						        context.fillText("2", 69, 176);
+						        context.fillText("3", 98, 176);
+						        context.fillText("4", 127, 176);
+						        context.fillText("5", 156, 176);
+						        context.fillText("6", 185, 176);
+						        context.fillText("7", 214, 176);
+
+						        // y-axis
+						        context.beginPath();
+						        context.moveTo(15, 9);
+						        context.lineTo(15, 159);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#7C7C7E';
+						        context.stroke();
+						        // y_labels
+						        context.font = "13px SourceCodePro-Regular";
+						        context.fillStyle = '#7C7C7E';
+						        context.fillText("7", 0, 15);
+						        context.fillText("6", 0, 35);
+						        context.fillText("5", 0, 56);
+						        context.fillText("4", 0, 77);
+						        context.fillText("3", 0, 98);
+						        context.fillText("2", 0, 119);
+						        context.fillText("1", 0, 140);
+						      
+						        // path
+						        context.beginPath();
+						        context.moveTo(14, 158);
+						        context.lineTo(44, 158);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        //
+						        context.beginPath();
+						        context.moveTo(44, 159);
+						        context.lineTo(44, 9);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        //
+						        context.beginPath();
+						        context.moveTo(44, 10);
+						        context.lineTo(219, 10);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        // point
+						        context.fillStyle = 'black';
+						        context.fillRect(13.5, 156.3, 3, 3);
+						        context.fillRect(216.5, 8.4, 3, 3);
+						    </script>
+						    <br>
+							<span style="padding:0 0 0 110px">(a)</span>
+						</td>
+						<td style="vertical-align:top; padding:0 0 0 40">
+							<canvas id="canv2" width="221" height="185"></canvas>
+						    <script>
+						        var canvas = document.getElementById('canv2');
+						        var context = canvas.getContext('2d');
+						        var i;     
+
+						        // grid
+						        for (i = 0; i < 8; i++) {
+						            var n = (i*21)+10;
+						            context.beginPath();
+						            context.moveTo(14, n);
+						            context.lineTo(219, n);
+						            context.lineWidth = .5;
+						            context.strokeStyle = 'lightgrey';
+						            context.stroke();
+						        }
+						        for (i = 0; i < 8; i++) {
+						            var n = (i*29)+15;
+						            context.beginPath();
+						            context.moveTo(n, 10);
+						            context.lineTo(n, 158);
+						            context.lineWidth = 1;
+						            context.strokeStyle = 'lightgrey';
+						            context.stroke();
+						        }
+
+						        // x-axis
+						        context.beginPath();
+						        context.moveTo(15, 158);
+						        context.lineTo(219, 158);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#7C7C7E';
+						        context.stroke();
+						        // x_labels
+						        context.font = "13px SourceCodePro-Regular";
+						        context.fillStyle = '#7C7C7E';
+						        context.fillText("1", 40, 176);
+						        context.fillText("2", 69, 176);
+						        context.fillText("3", 98, 176);
+						        context.fillText("4", 127, 176);
+						        context.fillText("5", 156, 176);
+						        context.fillText("6", 185, 176);
+						        context.fillText("7", 214, 176);
+
+						        // y-axis
+						        context.beginPath();
+						        context.moveTo(15, 9);
+						        context.lineTo(15, 159);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#7C7C7E';
+						        context.stroke();
+						        // y_labels
+						        context.font = "13px SourceCodePro-Regular";
+						        context.fillStyle = '#7C7C7E';
+						        context.fillText("7", 0, 15);
+						        context.fillText("6", 0, 35);
+						        context.fillText("5", 0, 56);
+						        context.fillText("4", 0, 77);
+						        context.fillText("3", 0, 98);
+						        context.fillText("2", 0, 119);
+						        context.fillText("1", 0, 140);
+
+						        // path
+						        context.beginPath();
+						        context.moveTo(14, 158);
+						        context.lineTo(102, 158);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        //
+						        context.beginPath();
+						        context.moveTo(102, 159);
+						        context.lineTo(102, 73);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        //
+						        context.beginPath();
+						        context.moveTo(101, 73);
+						        context.lineTo(219, 73);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        //
+						        context.beginPath();
+						        context.moveTo(218, 73);
+						        context.lineTo(218, 10);
+						        context.lineWidth = 1;
+						        context.strokeStyle = '#E74C3C';
+						        context.stroke();
+						        // point
+						        context.fillStyle = 'black';
+						        context.fillRect(13.5, 156.3, 3, 3);
+						        context.fillRect(216.7, 8.4, 3, 3);
+						    </script>
+						    <span style="padding:12 0 0 110px">(b)</span>
+						</td>
+					</tr>
+				</table>
+				<span>
+					Notice that no matter what path we take, the move&ndash;combintion will always consit of 7Rs and 7Us. That is to say, we are looking for the number of permutations of the array $\{\text{R,R,R,R,R,R,R,U,U,U,U,U,U,U}\} \ \Rightarrow \ 14!/(7!7!).$ The numbers are the same for $(2,7) \rightarrow (9,14).$ In general, for nonnegative integers $m,n,$ and any real numbers $x,y,$ the number of such paths from $(x,y)$ to $(x+m,y+n)$ is $(m+n)!/(m!n!). \ \square$
+				</span>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding: 0 0 0 00">27.</td>
+			<td style="vertical-align:top; padding: 0 0 0 10">
+				I've plotted and labeled both situations, (a) and (b), in the coordinate system below.
+				<img src="c1_p27.png" style="padding:10 0 0 50">
+				<ol type="a">
+					<li>
+						Each path consits of 2 horizontal, 1 vertical, and 7 axial moves. Hence, there are $10!/(2!1!7!)$ ways to arrange these 10 moves, which yields the number of paths. $\square$
+					</li>
+					<li>
+						Again, there are $10!/(2!1!7!)$ available paths. $\square$
+					</li>
+					<li>
+						If $x,y,z$ are any real numbers, and  $m,n,p$ are nonnegative integers, then the number of paths from $(x,y,z)$ to $(x+m,y+n,z+p)$ is $(m+n+p)!/(m!n!p!). \ \square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:5 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding: 0 0 0 00">28.</td>
+			<td style="vertical-align:top; padding: 0 0 0 10">
+				<ol type="a" style="padding: 0 0 0 20">
+					<li>
+						The <code><b>for</b></code> loop for $i$ is executed $(12-1)+1=12$ times, while those for $j$ and $k$ are executed $(10-5)+1=6,$ and $(15-8)+1=8$ times, respectively. Consequently, the given script will return a value of <code>counter</code> equal to $$0+12(1)+6(2)+8(3)=48. \ \square$$
+					</li>
+					<li>
+						This script has three tasks &mdash; $T_1, T_2, T_3$ &mdash; defined by the <code>do</code> procedure. Task $T_1$ coccurs each time we traverse the instructions in the $i$ loop. Similarly, tasks $T_2$ and $T_3$ occur during eacch iteration of the $j$ and $k$ loops, respectively. The final value for the integer variable <code>counter</code> follows by the rule of sum. $\square$
+					</li>
+					<li>
+						If $x,y,z$ are any real numbers, and  $m,n,p$ are nonnegative integers, then the number of paths from $(x,y,z)$ to $(x+m,y+n,z+p)$ is $(m+n+p)!/(m!n!p!). \ \square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:5 20 15 0">
+		<tr>
+			<td style="vertical-align:top; padding: 0 0 0 00">29.</td>
+			<td style="vertical-align:top; padding: 0 0 0 10">
+				(a) and (b): Again, the script defines three distinct tasks. By the rule of product, the <code>print</code> statement is executed $8\cdot6\cdot12=576$ times. $\square$
+			</td>
+		</tr>
+	</table>
+</html>

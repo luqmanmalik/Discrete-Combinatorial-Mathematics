@@ -1,0 +1,97 @@
+<html>
+	<table style="padding: 0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding: 0 0 0 00">06.</td>
+			<td style="vertical-align:top; padding: 0 0 0 10">
+				There are eight trophies $(t_1,t_2,t_3,\dots,t_8)$ being awarded. Generally, we will be considering linear permutaions of size eight selected from groups of size $n.$
+				<table style="padding: 10 0 0 0">
+					<tr>
+						<td style="vertical-align:top; padding: 0 0 0 00">(a)</td>
+						<td style="vertical-align:top; padding: 0 0 0 10">
+							If thirty people enter the race, we are considering permutations of thirty objects, taken eight at a time. That is, $P(30,8).$
+							<p style="padding: 0 0 10 0">
+								$
+								\require{cancel}
+								\begin{split}
+									\displaystyle
+									\frac{n!}{(n-r)!}
+									&= \frac{30!}{(30-8)!} \\
+									&= \frac{30\cdot29\cdot28\cdots23\cdot \color{grey}{\cancel{22!}}}{\color{grey}{\cancel{22!}}} \\
+									&= \frac{30!}{22!}. \\
+									&\ \square 
+								\end{split}
+								$
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding: 0 0 0 00">(b)</td>
+						<td style="vertical-align:top; padding: 0 0 0 10">
+							Roberta and Candice may finish among the top three runners in $3!=6$ ways. For each of these, there are $P(28,6)$ ways for the remaining $6/8$ top runners to finish the race. By the rule of product, there are $6 \cdot P(28,6)$ ways to award the trophies with these two runners among the top three finalists. $\square$
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>	
+	</table>
+	<table style="padding: 20 0 10 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">07.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				By the rule of product, there are $2^9$ possible orders. $\square$
+			</td>
+		</tr>
+	</table>
+	<table style="padding: 20 0 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">08.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				By the rule of product, there are
+				<table style="vertical-align:top; padding:0 0 0 0">
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(a)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">
+							$12!$ ways to process the programs without restrictions,
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(b)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">
+							$4!8!$ ways, where $\lambda_{S}=p_1,p_2,\dots,p_4$ is processed first,
+						</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(c)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">
+							and 4!5!3! ways, such that $\lambda_S \prec \lambda_{(S-1)} \prec \lambda_{(S-2)},$ where 
+							<br>
+							$\lambda_S=p_1,p_2,\dots,p_4, \ \ \ \lambda_{(S-1)}=p_5,p_6,\dots,p_8,p_9,$ $ \ \ \ \lambda_{(S-2)}=p_{10},p_{11},p_{12}. \ \square$
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table style="padding: 20 0 10 0">
+		<tr>
+			<td style="vertical-align:top; padding:2 0 0 00">09.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<table>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(a)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">$(14)(12)=168. \ \square$</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(b)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">$(14)(12)(6)(18)=18,144. \ \square$</td>
+					</tr>
+					<tr>
+						<td style="vertical-align:top; padding:0 0 0 00">(c)</td>
+						<td style="vertical-align:top; padding:0 0 0 10">$(8)(18)(6)(3)(14)(12)(14)(12)=73,156,608. \ \square$</td>
+					</tr>
+				</table>
+			</td>
+			</td>
+		</tr>
+	</table>
+</html>

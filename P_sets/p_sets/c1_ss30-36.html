@@ -1,0 +1,249 @@
+<html>
+	<table style="padding:0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">30.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						For five letters, there are $26\cdot26\cdot26\cdot1\cdot1=26^3$ such palindromes. For six letters, there are also $26\cdot26\cdot26\cdot1\cdot1\cdot1=26^3.$ $\square$
+					</li>
+					<li>
+						With the added restriction, there are $26\cdot25\cdot24\cdot=15,600$ palindromes in the case of five or six letters. $\square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">31.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				Let $N=\langle n_1 \ n_2 \ n_3 \ n_4 \ n_5 \ n_6 \rangle.$ By the rule of product, there are
+				<ol type="a" style="margin:5 20 0 0">
+					<li>
+						$9\cdot9\cdot8\cdot7\cdot6\cdot5=136,080$ six&ndash;digit integers with no leading zeros and no repeating digits. $\square$
+						<ol type="i" style="padding:5 0 0 30">
+							<li>
+								$(9\cdot8\cdot7\cdot6\cdot5\cdot1) \ [n_6=0] + (8\cdot8\cdot7\cdot6\cdot5\cdot4) \ [n_6=2,4,6,8]$
+								<br>
+								$= 68,800. \ \square$
+							</li>
+							<li>
+								$(9\cdot8\cdot7\cdot6\cdot5\cdot1) \ [n_6=0] + (8\cdot8\cdot7\cdot6\cdot5\cdot1) \ [n_6=5] = 28,560. \ \square$
+							</li>
+							<li>
+								Using the fact that $(N | 4) \leftrightarrow \langle n_5 \ n_6 \rangle | 4,$ we have
+								<br>
+								$(8\cdot7\cdot6\cdot5\cdot6) \ [n_5 \ n_6=04,08,20,40,60,80] + (7\cdot7\cdot6\cdot5\cdot16)$
+								<br>
+								$[n_5 \ n_6=12,16,24,28,32,36,48,52,56,64,68,72,76,84,92,96]$
+								<br>
+								$= 33,600. \ \square$
+							</li>
+						</ol>
+					</li>
+					<li>
+						When repeating is allowed, there are $9\times10^5$ such six&ndash;digit integers. $\square$
+						<ol type="i" style="padding:5 0 5 30">
+							<li>
+								$(9\cdot10\cdot10\cdot10\cdot10\cdot5) \ [n_6=2k] =450,000. \ \square$
+							</li>
+							<li>
+								$(9\cdot10\cdot10\cdot10\cdot10\cdot2) \ [n_6=5k] =180,000. \ \square$
+							</li>
+							<li>
+								$(9\cdot10\cdot10\cdot10\cdot10\cdot25) \ [n_6=4k] =225,000. \ \square$
+							</li>
+						</ol>
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:20 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">32.</td>
+			<td style="vertical-align:top; padding:0 20 0 20">
+				<ol type="a" style="padding:0 0 0 10">
+					<li>
+						Consider the $n$ objects $x_1,x_1,x_1,\dots,x_k,x_k,x_k.$ The number of ways in which we can arrange all of these $n=3k$ symbols is an integer of size 
+						$$\frac{n!}{ \ 3! \ 3! \ \cdots \ 3! \ 3! \\ [k \ \text{factors of 3}]}=\frac{n!}{(3!)^k}. \ \square$$
+					</li>
+					<li>
+						If $n,k$ are positive integers with $n=mk,$ then the number of ways in which we can arrange the $n$ objects
+						$$\{x^1_1,x^1_2,\dots,x^1_m\}, \ \{x^2_1,x^2_2,\dots,x^2_m\}, \ \dots, \ \{x^k_1,x^k_2,\dots,x^k_m\}$$
+						is an integer of size
+						$$\frac{n!}{m!m! \cdots m!m! \\ [k \ \text{factors of} \ m]}=\frac{n!}{(m!)^k}. \ \square$$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">33.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						With two choices per question, there are $2^{10}=1024$ distinct answer&ndash;keys. $\square$
+					</li>
+					<li>
+						In this case, there are three choices per question, and $3^{10}$ distinct answer sets. $\square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:20 20 20 0; width:95%">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 0">34.</td>
+			<td style="vertical-align:top; padding:0 0 0 0">
+				Let us consider the relevant cases, where $i_j \in INT$:
+				$$
+				INT=
+				\begin{cases}
+				\\
+					\displaystyle
+						+4!/2!, && i_0:\langle n_1 \ n_2 \ n_3 \ n_4 \rangle \\ \\
+						+4!, && i_1:\langle n_1 \ n_2 \ 7 \ 3 \rangle \\
+					\displaystyle
+						+(2)\bigg(\frac{4!}{2!}\bigg), && i_2:\langle n_1 \ 7 \ 3 \ 3 \rangle \\ \\
+					\displaystyle
+						+4!/2!, && i_3:\langle n_1 \ n_2 \ 7 \ 7 \rangle \\ \\
+					\displaystyle
+						+(2)\bigg(\frac{4!}{2!}\bigg), && i_4:\langle n_1 \ 7 \ 7 \ 3 \rangle \\ \\
+					\displaystyle
+						+\bigg(\frac{4!}{2!2!}\bigg), && i_5:\langle 7 \ 7 \ 3 \ 3 \rangle \\ \\
+				\end{cases}
+				$$
+				In total, we have 102 such four&ndash;digit integers. $\square$
+			</td>
+		</tr>
+	</table>
+	<table style="padding:0 20 0 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">35.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				<ol type="a" style="padding:0 0 0 20">
+					<li>
+						If arrangements are considered to be the same when one can be obtained from the other by rotation, then we have
+						<div style="padding:08 0 10 0">
+							<canvas id="myCanvas4" width="500" height="140"></canvas>
+						    <script>
+						    	var canvas = document.getElementById('myCanvas4');
+						    	var context = canvas.getContext('2d');
+						    	var centerX = canvas.width / 10;
+						    	var centerY = canvas.height / 2.8;
+						    	var radius = 30;
+						      
+						    	// Tables
+						    	for(i=0; i<4; i++){
+						      		context.beginPath();
+						      		context.arc(centerX+130*i, centerY, radius, 0, 2 * Math.PI, false);
+						      		context.fillStyle = '#f2f2f2';
+						      		context.fill();
+						      		context.lineWidth = 1;
+						    	}
+						      
+						    	// Equality signs
+						    	context.font = "13px SourceCodePro-Regular";
+						    	context.fillStyle = '#aaa';
+						    	context.fillText("=", 110, 56);
+						    	context.fillText("\u2260", 240, 56);
+						    	context.fillText("\u2260", 370, 56);
+						    	// T1_letters
+						    	context.fillText("A", 32,16);
+						    	context.fillText("B", 59,16);
+						    	context.fillText("C", 85,45);
+						    	context.fillText("D", 85,65);
+						    	context.fillText("E", 47,95);
+						    	context.fillText("F", 6,65);
+						    	context.fillText("G", 6,45);
+						    	// T2_letters
+						    	context.fillText("G", 33+130,16);
+						    	context.fillText("A", 58+130,16);
+						    	context.fillText("B", 85+130,45);
+						    	context.fillText("C", 85+130,65);
+						    	context.fillText("D", 47+130,95);
+						    	context.fillText("E", 6+130,65);
+						    	context.fillText("F", 6+130,45);
+						    	// T3_letters
+						    	context.fillText("G", 33+260,16);
+						    	context.fillText("A", 58+260,16);
+						    	context.fillText("C", 85+260,45);
+						    	context.fillText("B", 85+260,65);
+						    	context.fillText("D", 47+260,95);
+						    	context.fillText("E", 6+260,65);
+						    	context.fillText("F", 6+260,45);
+						    	// T2_letters
+						    	context.fillText("G", 33+390,16);
+						    	context.fillText("A", 58+390,16);
+						    	context.fillText("D", 85+390,45);
+						    	context.fillText("C", 85+390,65);
+						    	context.fillText("B", 47+390,95);
+						    	context.fillText("E", 6+390,65);
+						    	context.fillText("F", 6+390,45);
+
+							    // Line2
+							    context.beginPath();
+							    context.moveTo(180, 105);
+							    context.lineTo(180, 131);
+							    context.lineWidth = 1;
+							    context.strokeStyle = '#aaa';
+							    context.stroke();
+							    // Line2
+							    context.beginPath();
+							    context.moveTo(180, 130);
+							    context.lineTo(300, 130);
+							    context.lineWidth = 1;
+							    context.strokeStyle = '#aaa';
+							    context.stroke();
+							    // ≠
+							    context.fillText("\u2260", 47+260,135);
+							    // Line3
+							    context.beginPath();
+							    context.moveTo(440, 105);
+							    context.lineTo(440, 131);
+							    context.lineWidth = 1;
+							    context.strokeStyle = '#aaa';
+							    context.stroke();
+							    // Line4
+							    context.beginPath();
+							    context.moveTo(321, 130);
+							    context.lineTo(440, 130);
+							    context.lineWidth = 1;
+							    context.strokeStyle = '#aaa';
+							    context.stroke();
+						    </script>
+					    </div>
+					    So, inasmuch as each circular arrangement corresponds to seven linear arrangements, we have $7\times[n(\text{|||}^C:A,\dots,G)]=n(\text{|||}^L:A,\dots,G)=7!,$ where $"|||"$ denotes arrangment / sorting. Consequently, there are $7!/7=6!=720$ arrangements of $A,B,\dots,G$ around a circular table. $\square$
+					</li>
+					<li>
+						Suppose $A$ and $B$ insist on sitting next to each other. Then we are concerned with the cases 
+						$$
+						(A,B)=
+						\begin{cases}
+							+5!, && \langle A \ B \rangle \\
+							+5!, && \langle B \ A \rangle 
+						\end{cases}
+						$$
+						and there are $2(5!)$ such possible seating arrangments. $\square$
+					</li>
+				</ol>
+			</td>
+		</tr>
+	</table>
+	<table style="padding:0 20 10 0">
+		<tr>
+			<td style="vertical-align:top; padding:0 0 0 00">36.</td>
+			<td style="vertical-align:top; padding:0 0 0 10">
+				First, we locate person $A.$ Now, there are two cases to consider for a person $(P)$ sharing a table side with person $A.$ In either case, we have
+				<ol type="i">
+					<li>$(P,A)=7!$</li>
+					<li>$(A,P)=7!$</li>
+				</ol>
+				such seating arrangments. Hence, there a total of $2(7!)$ ways to sit eight people around a square table. $\square$
+			</td>
+		</tr>
+	</table>
+</html>
