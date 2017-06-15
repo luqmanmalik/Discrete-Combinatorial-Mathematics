@@ -336,13 +336,24 @@ hr.style-two {
 }
 /* Answer styles */
 .vtop_zero{vertical-align:top; padding:0 0 0 0}
+.vtop_t20{vertical-align:top; padding:20 0 0 0}
 .vtop_r20l10{vertical-align:top; padding:0 20 0 10}
+.vtop_r20l20{vertical-align:top; padding:0 20 0 20}
 .vtop_lten{vertical-align:top; padding:0 0 0 10}
 .vtop_r20-b15-l10{vertical-align:top; padding:0 20 15 10}
 .pt10{padding:10 0 0 0;}
 .pt10{padding:10 0 0 0;}
 .pt_15{padding:15 0 0 0;}
 .pt_20{padding:20 0 0 0;}
+.pr_20{padding:0 20 0 0;}
+.pl_10{padding:0 0 0 10;}
+.pl_20{padding:0 0 0 20;}
+.pblm_34{padding:20 20 20 0; width:95%}
+.r20_b10{padding:0 20 10 0;}
+.t5_l30{padding:5 0 0 30;}
+.t5_b5_l30{padding:5 0 5 30;}
 .pt10_r20{padding:10 20 0 0;}
 .pt20_r20{padding:20 20 0 0;}
 .pt20_r20_b15{padding:20 20 15 0;}
+.vtop_t20-r20-b10{vertical-align:top; padding:20 20 10 0}
+.mar_t5_r20{margin:5 20 0 0;}
