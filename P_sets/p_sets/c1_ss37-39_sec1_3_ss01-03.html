@@ -1,10 +1,10 @@
 <html>
-	<table style="padding:0 20 0 0">
+	<table class="pr_20">
 		<tr>
-			<td style="vertical-align:top; padding:0 0 0 00">37.</td>
-			<td style="vertical-align:top; padding:0 0 0 10">
+			<td class="vtop_zero">37.</td>
+			<td class="vtop_lten">
 				Let us model this situation as follows.
-				<div style="padding:5 0 0 0">
+				<div class="pt5">
 					<canvas id="myCanvas6" width="450" height="150"></canvas>
 					<script>
 				  		var canvas = document.getElementById('myCanvas6');
@@ -52,12 +52,12 @@
 			</td>
 		</tr>
 	</table>
-	<table style="padding:20 20 0 0">
+	<table class="pt20_r20">
 		<tr>
-			<td style="vertical-align:top; padding:0 0 0 00">38.</td>
-			<td style="vertical-align:top; padding:0 0 0 10">
+			<td class="vtop_zero">38.</td>
+			<td class="vtop_lten">
 				One such situation may look like:
-				<div style="margin:10 0 10 0">
+				<div class="mt10_b10">
 					<canvas id="myCanvas7" width="500" height="150"></canvas>
 					<script>
 						var canvas = document.getElementById('myCanvas7');
@@ -95,20 +95,20 @@
 					</script>
 				</div>
 				The women may be seated around the table in $8!$ ways &ndash; each arrangement leaving nine empty seats between them for the men to be placed. We can select six of these slots to place a male in 
-				<p style="padding:0 0 0 20">$\displaystyle\text{M}={9 \choose 6}(6!)$</p>
+				<p class="p_lten">$\displaystyle\text{M}={9 \choose 6}(6!)$</p>
 				ways. Consequantly, the number of seating arrangements under the given conditions amounts to 
-				<p style="padding:0 0 0 20">$\displaystyle\text{T}=(8!){9 \choose 6}(6!)=2,438,553,600. \ \square$</p>
+				<p class="p_lten">$\displaystyle\text{T}=(8!){9 \choose 6}(6!)=2,438,553,600. \ \square$</p>
 			</td>
 		</tr>
 	</table>
-	<table style="padding:20 20 0 0">
+	<table class="pt20_r20">
 		<tr>
-			<td style="vertical-align:top; padding:0 0 0 00">39.</td>
-			<td style="vertical-align:top; padding:0 0 0 10">
+			<td class="vtop_zero">39.</td>
+			<td class="vtop_lten">
 				Let us first work out a general concept in <code>psydocode</code>. Then we'll implement the algorithm as a <code>C++</code> procedure. And finally, we'll generate a state/stack diagram to fully understand the algorithms behavior.
 				<code class="code_block">
 					<b>procedure</b> Sum_of_Fact(i; sum &isin; <b>Z<sup>+</sup></b>; j,k &isin; (<b>Z<sup>+</sup></b>+0); factorial:[0...9]){
-					<p style="margin:5 0 0 10">
+					<p class="m_t5_l10">
 						&nbsp; <b>begin</b>{
 						<br>
 						&nbsp; &nbsp; factorial[0] := 1
@@ -144,59 +144,71 @@
 				The unique solution is 145, since $(1!)+(4!)+(5!)=1+24+120=145. \ \square$
 				<br>
 				To impliment the script in <code>C++</code>, I'll use the <code>Sublime</code> editor for scripting, and then I'll compile it in <code>terminal::Unix OS</code>.
+				<!-- C++ Script -->
 				<code class="code_block">
-					<p style="margin:5 0 0 0">
-						#<span style="color:#8DB9D4">include</span> &lt;iostream&gt;
-					</p>
-					<p style="margin:0 0 0 0">
-						<span style="color:#8DB9D4">using</span> namespace std;
-					</p>
-					<p style="margin:10 0 0 0; color:#566573">// function declaration;</p>
-					<p style="margin:0 0 0 0">
-						<span style="color:#A383F1">int</span> <span style="color:#E483F1">factorial</span> 
-						(<span style="color:#A383F1">int</span> n)
+					<p class="mar_t5">#<span class="pckgs">include</span> &lt;iostream&gt;</p>
+					<p class="m_zero"><span class="pckgs">using</span> namespace std;</p>
+					<p class="func_dec">// function declaration;</p>
+					<p class="m_zero">
+						<span class="int">int</span> 
+						<span class="func_def">factorial</span> 
+						(<span class="int">int</span> n)
 						<br>
 						<br>
-						<p style="margin:0 0 0 0; color:#566573">// define factorial;</p>
-						<p style="margin:0 0 0 0">
-							<span style="color:#A383F1">int</span> <span style="color:#E483F1">factorial</span> 
-							(<span style="color:#A383F1">int</span> n) {
+						<p class="comment_m">// define factorial;</p>
+						<p class="m_zero">
+							<span class="int">int</span> 
+							<span class="func_def">factorial</span> 
+							(<span class="int">int</span> n) {
 						</p>
-						<p style="margin:0 0 0 30">
-							<span style="color:#A383F1">int</span> &lambda; = <span style="color:#83B2F1">1</span>;
+						<div class="m_l30">
+							<span class="int">int</span> &lambda; = 
+							<span class="num">1</span>;
 							<br>
-							<b>for</b> (<span style="color:#A383F1">int</span> i = <span style="color:#83B2F1">1</span>; 
-							i <= n; ++i){
-								<br>
-								<p style="margin:0 0 0 60">&lambda; *= i;</p>
-							<p style="margin:0 0 0 30">}</p>
-							<p style="margin:0 0 0 30"><b>return</b> &lambda;;</p>
-							<p style="margin:0 0 0 0">}</p>
-						</p>
-						<p style="margin:0 0 0 0">
-							<span style="color:#566573">// Executable</span>
-							<p style="margin:0 0 0 0">
-							<span style="color:#A383F1">int</span> <span style="color:#E483F1">main</span> () {
-								<p style="margin:0 0 0 30">
-						   			<span style="color:#A383F1">int</span> m = <span style="color:#83B2F1">9</span>;
+							<b>for</b> 
+							(<span class="int">int</span> i = <span class="num">1</span>; i <= n; ++i){
+							<br>
+							<div class="m_l32">&lambda; *= i;</div>
+							<div class="m_zero">}</div>
+							<div class="m_zero"><b>return</b> &lambda;;</div>
+						</div>
+						<div class="m_zero">}</div>
+						<div class="mar_t15">
+							<span class="comment">// Executable</span>
+							<div class="m_zero">
+								<span class="int">int</span> <span class="func_def">main</span> () {
+								<div class="m_l30">
+						   			<span class="int">int</span> m = <span class="num">9</span>;
 						   			<br>
-						   			<span style="color:#A383F1">int</span> i, j, k, &Sigma;;
-						   			<p style="margin:10 0 0 30"><b>for</b> (<span style="color:#A383F1">int</span> i = <span style="color:#83B2F1">1</span>; i <= m; ++i) {</p>
-						   			<p style="margin:00 0 0 50"><b>for</b> (<span style="color:#A383F1">int</span> j = <span style="color:#83B2F1">0</span>; j <= m; ++j) {</p>
-						   			<p style="margin:00 0 0 70"><b>for</b> (<span style="color:#A383F1">int</span> k = <span style="color:#83B2F1">0</span>; k <= m; ++k) {</p>
-						   			<p style="margin:00 0 0 104; color:#566573">// call factorial(a).</p>
-						   			<p style="margin:00 0 0 104">&Sigma; = <b>factorial</b>(i) + <b>factorial</b>(j) + <b>factorial</b>(k);</p>
-						   			<p style="margin:00 0 0 104"><b>if</b> (&Sigma; == <span style="color:#83B2F1">100</span>*i + <span style="color:#83B2F1">10</span>*j + k) {</p>
-						   			<p style="margin:00 0 0 129">cout << &Sigma; << endl;</p>
-						   			<p style="margin:00 0 0 90">}</p>
-						   			<p style="margin:00 0 0 70">}</p>
-						   			<p style="margin:00 0 0 50">}</p>
-						   			<p style="margin:00 0 0 30">}</p>
-						   			<p style="margin:00 0 0 30"><b>return</b> <span style="color:#83B2F1">0</span>;</p>
-						   			<p style="margin:00 0 0 00">}</p>
-						   		</p>
-						   	</p>
-						</p>   
+						   			<span class="int">int</span> i, j, k, &Sigma;;
+						   			<p class="m_t10_l30">
+						   				<b>for</b> (
+						   				<span class="int">int</span> i = 
+						   				<span class="num">1</span>; i <= m; ++i) {
+						   			</p>
+						   			<p class="m_l50">
+						   				<b>for</b> (
+						   				<span class="int">int</span> j = 
+						   				<span class="num">0</span>; j <= m; ++j) {
+						   			</p>
+						   			<p class="m_l70">
+						   				<b>for</b> (
+						   				<span class="int">int</span> k = 
+						   				<span class="num">0</span>; k <= m; ++k) {
+						   			</p>
+						   			<p class="call_fact">// call factorial(a).</p>
+						   			<p class="sigma">&Sigma; = <b>factorial</b>(i) + <b>factorial</b>(j) + <b>factorial</b>(k);</p>
+						   			<p class="sigma"><b>if</b> (&Sigma; == <span class="num">100</span>*i + <span class="num">10</span>*j + k) {</p>
+						   			<p class="m_l129">cout << &Sigma; << endl;</p>
+						   			<p class="m_l90">}</p>
+						   			<p class="m_l70">}</p>
+						   			<p class="m_l50">}</p>
+						   			<p class="m_l30">}</p>
+						   			<p class="m_l30"><b>return</b> <span class="num">0</span>;</p>
+						   			<p class="m_zero">}</p>
+						   		</div>
+						   	</div>
+						</div>   
 					</p>
 				</code>
 				Sublime has a number of different color schemes available in the preference directory &mdash; the one above is my own. Moreover, <code>terminal</code> will compile the program with most (if not all) rendered <code>UTF&ndash;8</code> characters and <code>HTML</code> entities (in particular, <code>&lambda;</code> and <code>&Sigma;</code> produce no errors in the shell at runtime). The above script will return:
@@ -204,11 +216,11 @@
 			</td>
 		</tr>
 	</table>
-	<p class="subtitle" style="border-bottom:1 solid #f2f2f2; margin:20 20 0 0; padding:0 0 5 0">1.3 Combinations: The Binomial Theorem</p>
-	<table style="padding:15 20 0 0">
+	<p class="subtitle1pt3">1.3 Combinations: The Binomial Theorem</p>
+	<table class="t15_r20">
 		<tr>
-			<td style="vertical-align:top; padding:0 0 0 00; color:#aaa; font-size:14; font-family:'Avenir','light'">Proof:</td>
-			<td style="vertical-align:top; padding:0 0 0 10">
+			<td class="pf">Proof:</td>
+			<td class="vtop_lten">
 				As in the proof of the binomial theorem, the coefficient of $x_1^{n_1}x_2^{n_2}x_3^{n_3} \cdots x_t^{n_t}$ is the number of ways we can select $x_1$ from the $n_1$ of the $n$ factors, $x_2$ from $n_2$ of the $n-n_1$ remaining factors, $x_3$ from $n_3$ of the $n-n_1-n_2$ now remaining factors, ... , and $x_t$ from $n_t$ of the last $n-n_1-n_2-n_3-\cdots-n_{t-1}=n_t$ remaining factors. This can be carried out &ndash; as in part (a) of Example 1.22 &ndash; in
 				$$
 				{n \choose n_1}{n-n_1 \choose n_2}{n-n_1-n_2 \choose n_3} \cdots {n-n_1-n_2-n_3- \cdots -n_{t-1} \choose n_t}
@@ -228,13 +240,13 @@
 			</td>
 		</tr>
 	</table>
-	<table style="padding:20 20 10 0; width:95%">
+	<table class="pblm_01">
 		<tr>
-			<td style="vertical-align:top; padding:10 0 0 0">01.</td>
-			<td style="vertical-align:top; padding:0 0 0 0">
+			<td class="vtop_t10">01.</td>
+			<td class="vtop_zero">
 				<table style="width:100%">
 					<tr>
-						<td style="vertical-align:top; padding:0 20 0 0; border-right:1 solid lightgrey">
+						<td class="eqn">
 							$
 							\begin{equation}
 								\begin{split}
@@ -248,28 +260,28 @@
 							\end{equation}
 							$
 						</td>
-						<td style="vertical-align:center; padding:13 0 0 20">
+						<td class="c1s131">
 							<table style="height:100px">
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 00">$\{x_1,x_2\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_1,x_3\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_1,x_4\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_1,x_5\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_1,x_6\}$</td>
+									<td class="vtop_zero">$\{x_1,x_2\}$</td>
+									<td class="vtop_lten">$\{x_1,x_3\}$</td>
+									<td class="vtop_lten">$\{x_1,x_4\}$</td>
+									<td class="vtop_lten">$\{x_1,x_5\}$</td>
+									<td class="vtop_lten">$\{x_1,x_6\}$</td>
 								</tr>
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 00">$\{x_2,x_3\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_2,x_4\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_2,x_5\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_2,x_6\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_3,x_4\}$</td>
+									<td class="vtop_zero">$\{x_2,x_3\}$</td>
+									<td class="vtop_lten">$\{x_2,x_4\}$</td>
+									<td class="vtop_lten">$\{x_2,x_5\}$</td>
+									<td class="vtop_lten">$\{x_2,x_6\}$</td>
+									<td class="vtop_lten">$\{x_3,x_4\}$</td>
 								</tr>
 								<tr>
-									<td style="vertical-align:top; padding:0 0 0 00">$\{x_3,x_5\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_3,x_6\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_4,x_5\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_4,x_6\}$</td>
-									<td style="vertical-align:top; padding:0 0 0 10">$\{x_5,x_6\}$</td>
+									<td class="vtop_zero">$\{x_3,x_5\}$</td>
+									<td class="vtop_lten">$\{x_3,x_6\}$</td>
+									<td class="vtop_lten">$\{x_4,x_5\}$</td>
+									<td class="vtop_lten">$\{x_4,x_6\}$</td>
+									<td class="vtop_lten">$\{x_5,x_6\}$</td>
 								</tr>
 							</table>
 						</td>
@@ -278,24 +290,24 @@
 			</td>
 		</tr>
 	</table>
-	<table style="padding:20 20 10 0">
+	<table class="pt20_r20_b10">
 		<tr>
-			<td style="vertical-align:top; padding:10 0 0 00; color:grey">02.</td>
-			<td style="vertical-align:top; padding:00 0 0 10">$\displaystyle{12 \choose 5}=\frac{12!}{5!7!}=792. \ \square$</td>
-			<td style="vertical-align:top; padding:10 0 0 50">3.</td>
-			<td style="vertical-align:top; padding:00 0 0 10">
-				<table style="margin:8 0 0 0">
+			<td class="c1s132">02.</td>
+			<td class="vtop_lten">$\displaystyle{12 \choose 5}=\frac{12!}{5!7!}=792. \ \square$</td>
+			<td class="vtop_t10_l50">3.</td>
+			<td class="vtop_lten">
+				<table class="mar_t8">
 					<tr>
-						<td style="vertical-align:top; padding:0 0 0 00">(a)</td>
-						<td style="vertical-align:top; padding:1 0 0 10">$C(10,4)=(10\cdot9\cdot8\cdot7)/4!=210. \ \square$</td>
+						<td class="vtop_zero">(a)</td>
+						<td class="vtop_t1l10">$C(10,4)=(10\cdot9\cdot8\cdot7)/4!=210. \ \square$</td>
 					</tr>
 					<tr>
-						<td style="vertical-align:top; padding:7 0 0 00; color:grey">(b)</td>
-						<td style="vertical-align:top; padding:0 0 0 10">$\displaystyle{12 \choose 7}=\frac{12}{7!(5)!}=792. \square$</td>
+						<td class="c1s133">(b)</td>
+						<td class="vtop_lten">$\displaystyle{12 \choose 7}=\frac{12}{7!(5)!}=792. \square$</td>
 					</tr>
 					<tr>
-						<td style="vertical-align:top; padding:12 0 0 00">(c)</td>
-						<td style="vertical-align:top; padding:00 0 0 10">
+						<td class="vtop_t12">(c)</td>
+						<td class="vtop_lten">
 							$
 							\begin{equation}
 								\begin{split}
@@ -308,8 +320,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="vertical-align:top; padding:7 0 0 00">(d)</td>
-						<td style="vertical-align:top; padding:0 0 0 10">
+						<td class="vtop_t7">(d)</td>
+						<td class="vtop_lten">
 							$
 							\begin{equation}
 								\begin{split}
@@ -327,9 +339,9 @@
 			</td>
 		</tr>
 	</table>
-	<table style="padding:20 20 10 0">
+	<table class="pt20_r20_b10">
 		<tr>
-			<td style="vertical-align:top">
+			<td class="vtop_zero">
 				$\text{Once again, we see the combinatorial relationship} \ \displaystyle{n \choose r}={n \choose n-r} \ \text{expressed in}$ $\text{problems (2, 3.b)} \ \succ \ \text{pg}.21.$
 			</td>
 		</tr>
