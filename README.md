@@ -1,6 +1,6 @@
 ## Discrete and Combinatorial Mathematics: An Applied Introduction
 ### Fifth Edition Problem Sets &#9634; Ralph P. Grimaldi
-### MSC2010/LCCCN/ISBN: ...
+### MSC2010/ISBN-10/ISBN-13: 05-01_0201726343-978-0201726343
 #### Solutions by Luqman Malik
 
 A decent stack of work in combinatorics is indespensible to the contemporary track in pure mathematics. Sufice it to say that Grimaldi is no climb for the faint–hearted. **Finite state machines**, **automata theory**, and the **p–adic numbers** are topics I will be exploring more closely as I progress through the book. Later on, I will be looking for ways to integrate this work with a library on Libkin's _Elements of Finite Model Theory_.
