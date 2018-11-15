@@ -1,7 +1,12 @@
-## Discrete and Combinatorial Mathematics: An Applied Introduction
-### Fifth Edition Problem Sets &#9634; Ralph P. Grimaldi
-### MSC2010/ISBN-10/ISBN-13: 05-01_0201726343-978-0201726343
-#### Solutions by Luqman Malik
+## Discrete and Combinatorial Mathematics
+### An Applied Introduction
+#### Fifth Edition
+#### MSC2010/ISBN-10/ISBN-13: 05-01_0201726343-978-0201726343
+```  
+TXT Author: Ralph P. Grimaldi  
+Publisher: XXX XXX  
+ſ-SETS Author/Developer: Luqman Malik, MSc-R2
+```
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
