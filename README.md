@@ -7,12 +7,14 @@ TXT Author: Ralph P. Grimaldi
 Publisher: XXX XXX  
 ſ-SETS Author/Developer: Luqman Malik, MSc-R2
 ```
+---
+#### CONTENTS
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| col 3 is      | right-aligned | 1600 |
+| col 2 is      | centered      |   12 |
+| zebra stripes | are neat      |    1 |
 ---
 A decent stack of work in combinatorics is indespensible to the contemporary track in pure mathematics. Sufice it to say that Grimaldi is no climb for the faint–hearted. **Finite state machines**, **automata theory**, and the **p–adic numbers** are topics I will be exploring more closely as I progress through the book. Later on, I will be looking for ways to integrate this work with a library on Libkin's _Elements of Finite Model Theory_.
 
