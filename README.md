@@ -6,6 +6,8 @@
 TXT Author: Ralph P. Grimaldi  
 Publisher: XXX XXX  
 ſ-SETS Author/Developer: Luqman Malik, MSc-R2
+·············································
+©Hilix Research and Technologies, Inc.
 ```
 ---
 #### CONTENTS
