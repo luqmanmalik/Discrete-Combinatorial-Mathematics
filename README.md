@@ -1,7 +1,7 @@
 ## Discrete and Combinatorial Mathematics
 ### An Applied Introduction
 #### Fifth Edition
-#### MSC2010/ISBN-10/ISBN-13: 05-01_0201726343-978-0201726343
+#### 05-01_0201726343-978-0201726343
 ```  
 TXT Author: Ralph P. Grimaldi  
 Publisher: XXX XXX  
