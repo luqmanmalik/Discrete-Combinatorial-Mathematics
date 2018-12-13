@@ -16,8 +16,8 @@ __Fundamentals of Discrete Mathematicss__
 
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
-| Principals of counting      | First-Order Difference Equations | 1600 |
-| Combinatorics      | Logic      |   12 |
+| Principals of counting      | First-Order Difference Equations | Recurrence Relations |
+| Combinatorics      | Fundamentals of Logic      |   Generating Functions |
 | Further Topics in Enumeration | Graph Theory and Applications |    Relations and Functions |
 | Recurrence Relations | Generating Functions |    Languages: Finite Stae Msachines |
 ---
