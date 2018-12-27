@@ -15,7 +15,7 @@ Publisher: XXX XXX
 __Fundamentals of Discrete Mathematicss__
 
 | Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
+| :------------ | :------------ | :-----|
 | Principals of counting      | First-Order Difference Equations | Relations: The Second Time around |
 | Combinatorics      | Fundamentals of Logic      |   Generating Functions |
 | Further Topics in Enumeration | Graph Theory and Applications |    Relations and Functions |
