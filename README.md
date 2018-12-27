@@ -20,8 +20,9 @@ __Fundamentals of Discrete Mathematicss__
 | Combinatorics      | Fundamentals of Logic      | Generating Functions |
 | Further Topics in Enumeration | Graph Theory and Applications | Relations and Functions |
 | Recurrence Relations | Generating Functions | Languages: Finite State Msachines |
-| Properties of the Integers: Mathematical Induction | The Principal of Inclusions and Exclusions |    Languages: Finite State Msachines |
+| Properties of the Integers: Mathematical Induction | The Principal of Inclusions and Exclusions | Languages: Finite State Msachines |
 | An Introduction to Graph Theory | Trees | Optimization and Matching |
+| Rings and Modular Arithmetic | Boolean Algebra and Swtiching Functions | Groups, Coding Theory, and Polya's Method of Enumeration |
 ---
 A decent stack of work in combinatorics is indespensible to the contemporary track in pure mathematics. Sufice it to say that Grimaldi is no climb for the faint–hearted. **Finite state machines**, **automata theory**, and the **p–adic numbers** are topics I will be exploring more closely as I progress through the book. Later on, I will be looking for ways to integrate this work with a library on Libkin's _Elements of Finite Model Theory_.
 
